@@ -16,7 +16,10 @@
     { "source": "/blog", "destination": "/blog/index.html" },
     { "source": "/blog/how-much-does-franchise-fit-out-cost-canada", "destination": "/blog/how-much-does-franchise-fit-out-cost-canada.html" },
     { "source": "/blog/how-long-does-restaurant-construction-take", "destination": "/blog/how-long-does-restaurant-construction-take.html" },
-    { "source": "/blog/choosing-commercial-contractor-canada", "destination": "/blog/choosing-commercial-contractor-canada.html" }
+    { "source": "/blog/choosing-commercial-contractor-canada", "destination": "/blog/choosing-commercial-contractor-canada.html" },
+    { "source": "/blog/commercial-construction-permits-canada", "destination": "/blog/commercial-construction-permits-canada.html" },
+    { "source": "/blog/franchise-fit-out-checklist", "destination": "/blog/franchise-fit-out-checklist.html" },
+    { "source": "/blog/medical-clinic-construction-requirements", "destination": "/blog/medical-clinic-construction-requirements.html" }
   ],
   "headers": [
     {

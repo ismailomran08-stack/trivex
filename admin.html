@@ -289,6 +289,61 @@ textarea{resize:vertical;min-height:64px;line-height:1.5}
 </head>
 <body>
 
+<!-- LOGIN GATE -->
+<div id="loginGate" style="position:fixed;inset:0;z-index:9999;background:#0F1B2D;display:flex;align-items:center;justify-content:center;">
+  <div style="background:#fff;border-radius:16px;padding:48px;max-width:400px;width:90%;text-align:center;box-shadow:0 24px 64px rgba(0,0,0,0.3);">
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;color:#0F1B2D;margin-bottom:4px;">Trivex Admin</div>
+    <p style="font-size:14px;color:#6B7280;margin-bottom:32px;">Log in to manage your website.</p>
+    <input type="email" id="loginEmail" placeholder="Email" onkeydown="if(event.key==='Enter')document.getElementById('loginPassword').focus()"
+      style="width:100%;padding:14px 16px;border-radius:10px;border:1.5px solid #E5E7EB;font-family:'Inter',sans-serif;font-size:15px;outline:none;margin-bottom:12px;background:#F9FAFB;">
+    <input type="password" id="loginPassword" placeholder="Password" onkeydown="if(event.key==='Enter')doLogin()"
+      style="width:100%;padding:14px 16px;border-radius:10px;border:1.5px solid #E5E7EB;font-family:'Inter',sans-serif;font-size:15px;outline:none;margin-bottom:16px;background:#F9FAFB;letter-spacing:2px;">
+    <button onclick="doLogin()"
+      style="width:100%;padding:14px;border-radius:10px;background:#E8500A;color:#fff;font-family:'Inter',sans-serif;font-size:15px;font-weight:600;border:none;cursor:pointer;">
+      Log In
+    </button>
+    <p id="loginError" style="font-size:13px;color:#DC2626;margin-top:12px;display:none;">Incorrect password.</p>
+  </div>
+</div>
+<script>
+// Credentials are hashed — not stored in plain text
+const ADMIN_EMAIL_HASH = 'e14304eb9c18593495c0a3ef5742ef0ec302691f043672de70109fdd6aed3c75';
+const ADMIN_PASS_HASH = 'd7e507c10cfd8dba042bb1530e1994efa0fa079855e277f050a00944bbe0bc64';
+
+function sha256(str) {
+  const buf = new TextEncoder().encode(str);
+  return crypto.subtle.digest('SHA-256', buf).then(h => {
+    return Array.from(new Uint8Array(h)).map(b => b.toString(16).padStart(2, '0')).join('');
+  });
+}
+
+async function doLogin() {
+  const email = document.getElementById('loginEmail').value.trim().toLowerCase();
+  const pw = document.getElementById('loginPassword').value;
+  const emailHash = await sha256(email);
+  const passHash = await sha256(pw);
+  if (emailHash === ADMIN_EMAIL_HASH && passHash === ADMIN_PASS_HASH) {
+    sessionStorage.setItem('trivex_admin_auth', 'true');
+    document.getElementById('loginGate').style.display = 'none';
+  } else {
+    document.getElementById('loginError').style.display = 'block';
+    document.getElementById('loginPassword').value = '';
+    document.getElementById('loginPassword').style.borderColor = '#DC2626';
+    document.getElementById('loginEmail').style.borderColor = '#DC2626';
+    setTimeout(() => {
+      document.getElementById('loginError').style.display = 'none';
+      document.getElementById('loginPassword').style.borderColor = '#E5E7EB';
+      document.getElementById('loginEmail').style.borderColor = '#E5E7EB';
+    }, 2000);
+  }
+}
+
+// Check if already authenticated this session
+if (sessionStorage.getItem('trivex_admin_auth') === 'true') {
+  document.getElementById('loginGate').style.display = 'none';
+}
+</script>
+
 <!-- TOPBAR -->
 <header class="topbar">
   <div class="topbar-left">
