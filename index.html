@@ -932,13 +932,10 @@
 
 <script>
 // ══════════════════════════════════════════
-// LOAD DATA FROM LOCALSTORAGE (Admin Panel)
+// LOAD SITE DATA (from site-data.json or localStorage fallback)
 // ══════════════════════════════════════════
-(function loadSiteData() {
-    try {
-        const raw = localStorage.getItem('trivex_site_data');
-        if (!raw) return; // No admin data — use hardcoded defaults
-        const d = JSON.parse(raw);
+function applySiteData(d) {
+    if (!d) return;
 
         // Helper: set text/html of first match
         const setText = (sel, val) => { const el = document.querySelector(sel); if (el && val !== undefined) el.textContent = val; };
@@ -1114,8 +1111,25 @@
             }
         }
 
-    } catch (e) {
-        console.warn('Error loading site data from localStorage:', e);
+}
+
+// Load data: try site-data.json first (production), then localStorage (local dev)
+(function() {
+    fetch('/site-data.json?' + Date.now())
+        .then(r => { if (!r.ok) throw new Error('No file'); return r.json(); })
+        .then(d => { applySiteData(d); reinitAnimations(); })
+        .catch(() => {
+            // Fallback to localStorage (for local development / admin preview)
+            try {
+                const raw = localStorage.getItem('trivex_site_data');
+                if (raw) { applySiteData(JSON.parse(raw)); reinitAnimations(); }
+            } catch(e) { console.warn('No site data found, using defaults.'); }
+        });
+
+    function reinitAnimations() {
+        document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+            if (typeof revealObserver !== 'undefined') revealObserver.observe(el);
+        });
     }
 })();
 

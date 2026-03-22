@@ -303,6 +303,7 @@ textarea{resize:vertical;min-height:64px;line-height:1.5}
     <button class="tbtn tbtn-ghost" onclick="resetData()">&#8635; Reset</button>
     <a href="index.html" target="_blank" class="tbtn tbtn-outline">&#8599; Preview Site</a>
     <button class="tbtn tbtn-save" onclick="saveAll()">&#10003; Save</button>
+    <button class="tbtn" onclick="exportForDeploy()" style="background:#059669;color:#fff;font-weight:700;">&#8681; Export for Deploy</button>
   </div>
 </header>
 
@@ -905,12 +906,25 @@ function saveAll() {
     const json = JSON.stringify(data);
     if (json.length * 2 > 4.5 * 1024 * 1024) toast('Data is very large. Use URLs for images.', true);
     localStorage.setItem('trivex_site_data', json);
-    toast('All changes saved!');
+    toast('All changes saved! Use "Export for Deploy" to push to live site.');
     updateStorage();
   } catch(e) {
     if (e.name === 'QuotaExceededError' || e.code === 22) toast('Storage full! Remove uploaded images or use URLs.', true);
     else toast('Error: ' + e.message, true);
   }
+}
+function exportForDeploy() {
+  collectAll();
+  data.lastSaved = new Date().toISOString();
+  localStorage.setItem('trivex_site_data', JSON.stringify(data));
+  const json = JSON.stringify(data, null, 2);
+  const blob = new Blob([json], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'site-data.json';
+  a.click();
+  URL.revokeObjectURL(a.href);
+  toast('site-data.json downloaded! Drop it in the project root folder and push to GitHub to deploy.');
 }
 function resetData() {
   if (!confirm('Reset all data to defaults? This erases all changes.')) return;
