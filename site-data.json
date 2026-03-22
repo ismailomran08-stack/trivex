@@ -11,7 +11,7 @@
   },
   "stats": [
     {
-      "target": 250,
+      "target": 50,
       "suffix": "+",
       "label": "Projects Completed"
     },
@@ -26,9 +26,9 @@
       "label": "Expert Members"
     },
     {
-      "target": 3,
-      "suffix": "+",
-      "label": "Partner Corporations"
+      "target": 8,
+      "suffix": "",
+      "label": "Provinces Covered"
     }
   ],
   "whyTrivex": {
@@ -37,11 +37,11 @@
     "cards": [
       {
         "title": "Partner-Operated",
-        "description": "Every project is led personally by one of our partners — not delegated to a junior PM. You work directly with the people who own the company."
+        "description": "Every project is led personally by one of our partners, not delegated to a junior PM. You work directly with the people who own the company."
       },
       {
         "title": "Coast-to-Coast",
-        "description": "We operate across all Canadian provinces with local knowledge and national reach. Wherever your project is, we're already there."
+        "description": "We operate across 8 Canadian provinces with local knowledge and national reach. Wherever your project is, we're already there."
       },
       {
         "title": "Systems-Driven",
@@ -693,5 +693,5 @@
       }
     ]
   },
-  "lastSaved": "2026-03-22T23:43:48.943Z"
+  "lastSaved": "2026-03-22T23:45:09.621Z"
 }
