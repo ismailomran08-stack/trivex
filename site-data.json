@@ -1,17 +1,17 @@
 {
   "hero": {
-    "badge": "Now Operating Across All Canadian Provinces",
+    "badge": "Now Operating Across 8 Canadian Provinces",
     "titleLine1": "Partner-Operated",
     "titleLine2": "Commercial Construction.",
-    "description": "250+ completed projects across Canada. Franchise fit-outs, medical clinics, restaurant builds, and commercial spaces — led personally by the owners, every time.",
+    "description": "50+ completed projects across Canada. Franchise fit-outs, medical clinics, restaurant builds, and commercial spaces — led personally by the owners, every time.",
     "mainImage": "https://trivexgroup.com/wp-content/uploads/2026/02/20240610_210026-600x600.jpg",
     "floatImage": "https://trivexgroup.com/wp-content/uploads/2026/02/20250308_201937-600x600.jpg",
-    "statNumber": "250+",
+    "statNumber": "50+",
     "statLabel": "Projects"
   },
   "stats": [
     {
-      "target": 250,
+      "target": 50,
       "suffix": "+",
       "label": "Projects Completed"
     },
@@ -26,9 +26,9 @@
       "label": "Expert Members"
     },
     {
-      "target": 3,
-      "suffix": "+",
-      "label": "Partner Corporations"
+      "target": 8,
+      "suffix": "",
+      "label": "Provinces Covered"
     }
   ],
   "whyTrivex": {
@@ -37,11 +37,11 @@
     "cards": [
       {
         "title": "Partner-Operated",
-        "description": "Every project is led personally by one of our partners — not delegated to a junior PM. You work directly with the people who own the company."
+        "description": "Every project is have a partner invested in it, not delegated to a junior PM. You work directly with the people who own the company."
       },
       {
         "title": "Coast-to-Coast",
-        "description": "We operate across all Canadian provinces with local knowledge and national reach. Wherever your project is, we're already there."
+        "description": "We operate across 8 Canadian provinces with local knowledge and national reach. Wherever your project is, we're already there."
       },
       {
         "title": "Systems-Driven",
@@ -57,7 +57,7 @@
       },
       {
         "title": "Zero Tolerance Safety",
-        "description": "Safety isn't a checkbox — it's built into how we operate. Our job sites follow strict safety protocols with zero tolerance for shortcuts."
+        "description": "Safety isn't a checkbox,  it's built into how we operate. Our job sites follow strict safety protocols with zero tolerance for shortcuts."
       }
     ]
   },
@@ -426,13 +426,13 @@
     "items": [
       {
         "quote": "Trivex delivered our franchise location three days ahead of schedule. The partners were on site every single day — you could tell they cared about the quality as much as we did. Best contractor experience we've had.",
-        "name": "Ahmed K.",
+        "name": "Ivan Seagle",
         "role": "Franchise Owner, QSR Brand",
-        "initials": "AK"
+        "initials": "IS"
       },
       {
         "quote": "We needed our dental clinic operational within a tight timeline and Trivex made it happen. They understood the unique requirements of a medical build-out and handled everything from permitting to final inspection seamlessly.",
-        "name": "Dr. Sarah R.",
+        "name": "Dr. Sarah Romani",
         "role": "Owner, Dental Clinic",
         "initials": "SR"
       }
@@ -693,5 +693,5 @@
       }
     ]
   },
-  "lastSaved": "2026-03-22T23:03:51.967Z"
+  "lastSaved": "2026-03-22T23:35:49.469Z"
 }
