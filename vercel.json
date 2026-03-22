@@ -1,6 +1,22 @@
 {
   "rewrites": [
-    { "source": "/admin", "destination": "/admin.html" }
+    { "source": "/admin", "destination": "/admin.html" },
+    { "source": "/services/franchise-construction", "destination": "/services/franchise-construction.html" },
+    { "source": "/services/restaurant-construction", "destination": "/services/restaurant-construction.html" },
+    { "source": "/services/medical-clinic-construction", "destination": "/services/medical-clinic-construction.html" },
+    { "source": "/services/office-commercial-construction", "destination": "/services/office-commercial-construction.html" },
+    { "source": "/locations/ontario", "destination": "/locations/ontario.html" },
+    { "source": "/locations/nova-scotia", "destination": "/locations/nova-scotia.html" },
+    { "source": "/locations/new-brunswick", "destination": "/locations/new-brunswick.html" },
+    { "source": "/locations/newfoundland", "destination": "/locations/newfoundland.html" },
+    { "source": "/locations/pei", "destination": "/locations/pei.html" },
+    { "source": "/locations/manitoba", "destination": "/locations/manitoba.html" },
+    { "source": "/locations/saskatchewan", "destination": "/locations/saskatchewan.html" },
+    { "source": "/locations/alberta", "destination": "/locations/alberta.html" },
+    { "source": "/blog", "destination": "/blog/index.html" },
+    { "source": "/blog/how-much-does-franchise-fit-out-cost-canada", "destination": "/blog/how-much-does-franchise-fit-out-cost-canada.html" },
+    { "source": "/blog/how-long-does-restaurant-construction-take", "destination": "/blog/how-long-does-restaurant-construction-take.html" },
+    { "source": "/blog/choosing-commercial-contractor-canada", "destination": "/blog/choosing-commercial-contractor-canada.html" }
   ],
   "headers": [
     {
@@ -17,5 +33,9 @@
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
       ]
     }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "status": 404, "dest": "/404.html" }
   ]
 }
