@@ -302,8 +302,8 @@ textarea{resize:vertical;min-height:64px;line-height:1.5}
     </div>
     <button class="tbtn tbtn-ghost" onclick="resetData()">&#8635; Reset</button>
     <a href="index.html" target="_blank" class="tbtn tbtn-outline">&#8599; Preview Site</a>
-    <button class="tbtn tbtn-save" onclick="saveAll()">&#10003; Save</button>
-    <button class="tbtn" onclick="exportForDeploy()" style="background:#059669;color:#fff;font-weight:700;">&#8681; Export for Deploy</button>
+    <button class="tbtn tbtn-save" onclick="saveAll()">&#10003; Save &amp; Deploy</button>
+    <button class="tbtn" onclick="exportForDeploy()" style="background:#374151;color:#fff;">&#8681; Backup JSON</button>
   </div>
 </header>
 
@@ -898,21 +898,84 @@ function collectSEO() {
   data.seo.language = val('seo-language');
 }
 
-// ====================== SAVE / RESET ======================
-function saveAll() {
+// ====================== GITHUB DEPLOY CONFIG ======================
+const GITHUB_REPO = 'ismailomran08-stack/trivex';
+const GITHUB_FILE = 'site-data.json';
+const GITHUB_BRANCH = 'main';
+function getGitHubToken() {
+  let token = localStorage.getItem('trivex_gh_token');
+  if (!token) {
+    token = prompt('Enter your GitHub Personal Access Token to enable direct deploy.\nThis is saved in your browser only (never sent anywhere except GitHub).\n\nYou can generate one at: github.com/settings/tokens');
+    if (token) localStorage.setItem('trivex_gh_token', token);
+  }
+  return token;
+}
+
+// ====================== SAVE & DEPLOY ======================
+async function saveAll() {
   collectAll();
   data.lastSaved = new Date().toISOString();
+
+  // Save to localStorage (for local preview)
   try {
-    const json = JSON.stringify(data);
-    if (json.length * 2 > 4.5 * 1024 * 1024) toast('Data is very large. Use URLs for images.', true);
-    localStorage.setItem('trivex_site_data', json);
-    toast('All changes saved! Use "Export for Deploy" to push to live site.');
+    localStorage.setItem('trivex_site_data', JSON.stringify(data));
     updateStorage();
+  } catch(e) {}
+
+  // Deploy to GitHub → Vercel
+  toast('Saving & deploying to live site...');
+  try {
+    const json = JSON.stringify(data, null, 2);
+    const token = getGitHubToken();
+    if (!token) { toast('Deploy cancelled — no GitHub token.', true); return; }
+
+    const content = btoa(unescape(encodeURIComponent(json)));
+
+    // Get current file SHA (needed for updates)
+    let sha = null;
+    try {
+      const existing = await fetch('https://api.github.com/repos/' + GITHUB_REPO + '/contents/' + GITHUB_FILE + '?ref=' + GITHUB_BRANCH, {
+        headers: { 'Authorization': 'token ' + token }
+      });
+      if (existing.ok) {
+        const fileData = await existing.json();
+        sha = fileData.sha;
+      }
+    } catch(e) {}
+
+    // Push to GitHub
+    const body = {
+      message: 'Update site content — ' + new Date().toLocaleString(),
+      content: content,
+      branch: GITHUB_BRANCH
+    };
+    if (sha) body.sha = sha;
+
+    const res = await fetch('https://api.github.com/repos/' + GITHUB_REPO + '/contents/' + GITHUB_FILE, {
+      method: 'PUT',
+      headers: {
+        'Authorization': 'token ' + token,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    });
+
+    if (res.ok) {
+      toast('Saved & deployed! Live in ~30 seconds.');
+    } else {
+      const err = await res.json();
+      if (res.status === 401) {
+        localStorage.removeItem('trivex_gh_token');
+        toast('Invalid token — cleared. Click Save & Deploy again to re-enter.', true);
+      } else {
+        toast('Deploy failed: ' + (err.message || 'Unknown error'), true);
+      }
+    }
   } catch(e) {
-    if (e.name === 'QuotaExceededError' || e.code === 22) toast('Storage full! Remove uploaded images or use URLs.', true);
-    else toast('Error: ' + e.message, true);
+    toast('Deploy error: ' + e.message, true);
   }
 }
+
 function exportForDeploy() {
   collectAll();
   data.lastSaved = new Date().toISOString();
@@ -924,7 +987,7 @@ function exportForDeploy() {
   a.download = 'site-data.json';
   a.click();
   URL.revokeObjectURL(a.href);
-  toast('site-data.json downloaded! Drop it in the project root folder and push to GitHub to deploy.');
+  toast('site-data.json downloaded as backup.');
 }
 function resetData() {
   if (!confirm('Reset all data to defaults? This erases all changes.')) return;
