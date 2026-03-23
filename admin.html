@@ -970,6 +970,7 @@ function getGitHubToken() {
 async function saveAll() {
   collectAll();
   data.lastSaved = new Date().toISOString();
+  data.adminDeployed = true;
 
   // Save to localStorage (for local preview)
   try {

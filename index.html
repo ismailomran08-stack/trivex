@@ -1107,22 +1107,38 @@ function applySiteData(d) {
 }
 
 // Load data: try site-data.json first (production), then localStorage (local dev)
+// Only apply if admin has explicitly deployed (adminDeployed flag is true)
 (function() {
     fetch('/site-data.json?' + Date.now())
         .then(r => { if (!r.ok) throw new Error('No file'); return r.json(); })
-        .then(d => { applySiteData(d); reinitAnimations(); })
+        .then(d => {
+            // Only apply if this was explicitly deployed from admin panel
+            if (d && d.adminDeployed === true) {
+                applySiteData(d);
+                reinitAnimations();
+            }
+        })
         .catch(() => {
             // Fallback to localStorage (for local development / admin preview)
             try {
                 const raw = localStorage.getItem('trivex_site_data');
-                if (raw) { applySiteData(JSON.parse(raw)); reinitAnimations(); }
-            } catch(e) { console.warn('No site data found, using defaults.'); }
+                if (raw) {
+                    const d = JSON.parse(raw);
+                    if (d && d.adminDeployed === true) {
+                        applySiteData(d);
+                        reinitAnimations();
+                    }
+                }
+            } catch(e) {}
         });
 
     function reinitAnimations() {
-        document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
-            if (typeof revealObserver !== 'undefined') revealObserver.observe(el);
-        });
+        setTimeout(() => {
+            counted = false;
+            document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+                if (typeof revealObserver !== 'undefined') revealObserver.observe(el);
+            });
+        }, 50);
     }
 })();
 
@@ -1142,12 +1158,17 @@ toggle.addEventListener('click', () => mobileMenu.classList.toggle('open'));
 function closeMobile() { mobileMenu.classList.remove('open'); }
 
 // ── Counter animation ──
-const counters = document.querySelectorAll('.stat-number');
 let counted = false;
 function animateCounters() {
-    counters.forEach(counter => {
+    // Re-query every time — DOM may have been replaced by applySiteData
+    const liveCounters = document.querySelectorAll('.stat-number');
+    liveCounters.forEach(counter => {
         const target = +counter.getAttribute('data-target');
-        const suffix = '+';
+        // Detect suffix from the initial text content (0+, 0%, 0)
+        const initial = counter.textContent.trim();
+        let suffix = '';
+        if (initial.endsWith('+')) suffix = '+';
+        else if (initial.endsWith('%')) suffix = '%';
         const duration = 1800;
         const step = target / (duration / 16);
         let current = 0;
