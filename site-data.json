@@ -425,14 +425,14 @@
   "testimonials": {
     "items": [
       {
-        "quote": "Trivex delivered our franchise location three days ahead of schedule. The partners were on site every single day — you could tell they cared about the quality as much as we did. Best contractor experience we've had.",
-        "name": "Ahmed K.",
-        "role": "Franchise Owner, QSR Brand",
-        "initials": "AK"
+        "quote": "Trivex delivered our franchise location three days ahead of schedule. You could tell they cared about the quality as much as we did. Best contractor experience we've had.",
+        "name": "Mike Constantine",
+        "role": "Franchise Owner, QSR",
+        "initials": "MC"
       },
       {
         "quote": "We needed our dental clinic operational within a tight timeline and Trivex made it happen. They understood the unique requirements of a medical build-out and handled everything from permitting to final inspection seamlessly.",
-        "name": "Dr. Sarah R.",
+        "name": "Dr. Sarah Rowa",
         "role": "Owner, Dental Clinic",
         "initials": "SR"
       }
@@ -693,6 +693,6 @@
       }
     ]
   },
-  "lastSaved": "2026-03-23T00:04:01.219Z",
+  "lastSaved": "2026-03-23T13:52:30.088Z",
   "adminDeployed": true
 }
