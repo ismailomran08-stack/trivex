@@ -1,0 +1,10 @@
+{
+  "name": "trivex-website",
+  "private": true,
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2"
+  }
+}

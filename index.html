@@ -90,51 +90,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <!-- SEO overrides from Admin Panel -->
-    <script>
-    (function() {
-        try {
-            const raw = localStorage.getItem('trivex_site_data');
-            if (!raw) return;
-            const d = JSON.parse(raw);
-            if (!d.seo) return;
-            const s = d.seo;
-            if (s.title) document.title = s.title;
-            const setMeta = (name, content, prop) => {
-                if (!content) return;
-                let el = prop ? document.querySelector('meta[property="' + name + '"]') : document.querySelector('meta[name="' + name + '"]');
-                if (el) { el.setAttribute('content', content); }
-                else { el = document.createElement('meta'); el.setAttribute(prop ? 'property' : 'name', name); el.setAttribute('content', content); document.head.appendChild(el); }
-            };
-            if (s.description) setMeta('description', s.description);
-            if (s.keywords) setMeta('keywords', s.keywords);
-            if (s.canonical) { const c = document.querySelector('link[rel="canonical"]'); if (c) c.href = s.canonical; }
-            if (s.og) { setMeta('og:title', s.og.title || s.title, true); setMeta('og:description', s.og.description || s.description, true); setMeta('og:image', s.og.image, true); setMeta('og:type', s.og.type, true); setMeta('og:url', s.og.url, true); }
-            if (s.twitter) { setMeta('twitter:card', s.twitter.card); setMeta('twitter:title', s.twitter.title || s.title); setMeta('twitter:description', s.twitter.description || s.description); if (s.twitter.image) setMeta('twitter:image', s.twitter.image); }
-            if (s.robots) { const r = (s.robots.index ? 'index' : 'noindex') + ', ' + (s.robots.follow ? 'follow' : 'nofollow'); setMeta('robots', r); }
-            if (s.googleVerification) setMeta('google-site-verification', s.googleVerification);
-            if (s.language) document.documentElement.lang = s.language;
-            // Update structured data
-            if (s.structuredData) {
-                const sd = s.structuredData;
-                const ldEl = document.querySelector('script[type="application/ld+json"]');
-                if (ldEl) {
-                    const ld = JSON.parse(ldEl.textContent);
-                    if (sd.name) ld.name = sd.name;
-                    if (sd.description) ld.description = sd.description;
-                    if (sd.logo) ld.logo = sd.logo;
-                    if (sd.url) ld.url = sd.url;
-                    if (sd.phone) ld.telephone = sd.phone;
-                    if (sd.email) ld.email = sd.email;
-                    if (sd.address) { ld.address = { '@type': 'PostalAddress', streetAddress: sd.address.street, addressLocality: sd.address.city, addressRegion: sd.address.province, postalCode: sd.address.postal, addressCountry: sd.address.country }; }
-                    if (sd.serviceArea) ld.areaServed = sd.serviceArea;
-                    if (sd.socialProfiles) ld.sameAs = sd.socialProfiles;
-                    if (sd.priceRange) ld.priceRange = sd.priceRange;
-                    ldEl.textContent = JSON.stringify(ld);
-                }
-            }
-        } catch(e) { console.warn('SEO load error:', e); }
-    })();
-    </script>
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
@@ -1106,46 +1061,23 @@ function applySiteData(d) {
     }
 }
 
-// Load data: try site-data.json first (production), then localStorage (local dev)
-// Only apply if admin has explicitly deployed (adminDeployed flag is true)
+// Load site data from site-data.json (written at build time from Supabase)
 (function() {
-    fetch('/site-data.json?' + Date.now())
+    fetch('/site-data.json')
         .then(r => { if (!r.ok) throw new Error('No file'); return r.json(); })
         .then(d => {
-            // Only apply if this was explicitly deployed from admin panel
             if (d && d.adminDeployed === true) {
                 applySiteData(d);
-                reinitAnimations();
+                setTimeout(() => {
+                    counted = false;
+                    document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+                        if (typeof revealObserver !== 'undefined') revealObserver.observe(el);
+                    });
+                }, 50);
             }
         })
-        .catch(() => {
-            // Fallback to localStorage (for local development / admin preview)
-            try {
-                const raw = localStorage.getItem('trivex_site_data');
-                if (raw) {
-                    const d = JSON.parse(raw);
-                    if (d && d.adminDeployed === true) {
-                        applySiteData(d);
-                        reinitAnimations();
-                    }
-                }
-            } catch(e) {}
-        });
-
-    function reinitAnimations() {
-        setTimeout(() => {
-            counted = false;
-            document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
-                if (typeof revealObserver !== 'undefined') revealObserver.observe(el);
-            });
-        }, 50);
-    }
+        .catch(() => {});
 })();
-
-// Listen for changes from admin panel in another tab
-window.addEventListener('storage', (e) => {
-    if (e.key === 'trivex_site_data') location.reload();
-});
 
 // ── Smooth scroll without hash in URL ──
 function scrollTo(id) {

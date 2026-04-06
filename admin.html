@@ -286,6 +286,7 @@ textarea{resize:vertical;min-height:64px;line-height:1.5}
   .about-prev{flex-direction:column}
 }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
 
@@ -948,18 +949,11 @@ function collectSEO() {
   data.seo.language = val('seo-language');
 }
 
-// ====================== GITHUB DEPLOY CONFIG ======================
-const GITHUB_REPO = 'ismailomran08-stack/trivex';
-const GITHUB_FILE = 'site-data.json';
-const GITHUB_BRANCH = 'main';
-function getGitHubToken() {
-  let token = localStorage.getItem('trivex_gh_token');
-  if (!token) {
-    token = prompt('Enter your GitHub Personal Access Token to enable direct deploy.\nThis is saved in your browser only (never sent anywhere except GitHub).\n\nYou can generate one at: github.com/settings/tokens');
-    if (token) localStorage.setItem('trivex_gh_token', token);
-  }
-  return token;
-}
+// ====================== SUPABASE CONFIG ======================
+const SUPABASE_URL = 'https://tnqodaffoorxbkjwoqgt.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRucW9kYWZmb29yeGJrandvcWd0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU0ODA0MDQsImV4cCI6MjA5MTA1NjQwNH0.2dqbH5himHIGGP5n2NhVJovVA3PFgxqX25iQr3eZhD0';
+const DEPLOY_HOOK_URL = 'https://api.vercel.com/v1/integrations/deploy/prj_7QAPEMdyt4lU1ZcBtJobkzWRkZem/DVamMhjqiL';
+const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 // ====================== SAVE & DEPLOY ======================
 async function saveAll() {
@@ -973,57 +967,29 @@ async function saveAll() {
     updateStorage();
   } catch(e) {}
 
-  // Deploy to GitHub → Vercel
-  toast('Saving & deploying to live site...');
+  toast('Saving to database...');
   try {
-    const json = JSON.stringify(data, null, 2);
-    const token = getGitHubToken();
-    if (!token) { toast('Deploy cancelled - no GitHub token.', true); return; }
+    const { error } = await supabase
+      .from('site_content')
+      .upsert({ id: 'main', content: data, updated_at: new Date().toISOString() });
 
-    const content = btoa(unescape(encodeURIComponent(json)));
+    if (error) throw error;
 
-    // Get current file SHA (needed for updates)
-    let sha = null;
-    try {
-      const existing = await fetch('https://api.github.com/repos/' + GITHUB_REPO + '/contents/' + GITHUB_FILE + '?ref=' + GITHUB_BRANCH, {
-        headers: { 'Authorization': 'token ' + token }
-      });
-      if (existing.ok) {
-        const fileData = await existing.json();
-        sha = fileData.sha;
+    toast('Saved! Triggering deploy...');
+
+    // Trigger Vercel deploy hook
+    if (DEPLOY_HOOK_URL) {
+      try {
+        await fetch(DEPLOY_HOOK_URL, { method: 'POST' });
+        toast('Saved & deploying! Live in ~30 seconds.');
+      } catch(e) {
+        toast('Saved to DB but deploy trigger failed. Redeploy manually from Vercel.', true);
       }
-    } catch(e) {}
-
-    // Push to GitHub
-    const body = {
-      message: 'Update site content - ' + new Date().toLocaleString(),
-      content: content,
-      branch: GITHUB_BRANCH
-    };
-    if (sha) body.sha = sha;
-
-    const res = await fetch('https://api.github.com/repos/' + GITHUB_REPO + '/contents/' + GITHUB_FILE, {
-      method: 'PUT',
-      headers: {
-        'Authorization': 'token ' + token,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(body)
-    });
-
-    if (res.ok) {
-      toast('Saved & deployed! Live in ~30 seconds.');
     } else {
-      const err = await res.json();
-      if (res.status === 401) {
-        localStorage.removeItem('trivex_gh_token');
-        toast('Invalid token - cleared. Click Save & Deploy again to re-enter.', true);
-      } else {
-        toast('Deploy failed: ' + (err.message || 'Unknown error'), true);
-      }
+      toast('Saved to database! Set DEPLOY_HOOK_URL to enable auto-deploy.', true);
     }
   } catch(e) {
-    toast('Deploy error: ' + e.message, true);
+    toast('Save error: ' + e.message, true);
   }
 }
 
@@ -1948,8 +1914,40 @@ document.querySelectorAll('.sidebar a[data-section]').forEach(a => {
   a.addEventListener('click', e => { e.preventDefault(); switchSection(a.dataset.section); });
 });
 
-loadData();
-render();
+// Load from Supabase on admin panel open, fallback to localStorage
+(async function loadFromSupabase() {
+  try {
+    const { data: row, error } = await supabase
+      .from('site_content')
+      .select('content')
+      .eq('id', 'main')
+      .single();
+    if (row && row.content) {
+      data = row.content;
+      // Ensure all keys exist
+      for (const k of Object.keys(DEFAULT_DATA)) {
+        if (!(k in data)) data[k] = deepClone(DEFAULT_DATA[k]);
+      }
+      if (!data.seo) data.seo = deepClone(DEFAULT_DATA.seo);
+      if (!data.seo.og) data.seo.og = deepClone(DEFAULT_DATA.seo.og);
+      if (!data.seo.twitter) data.seo.twitter = deepClone(DEFAULT_DATA.seo.twitter);
+      if (!data.seo.structuredData) data.seo.structuredData = deepClone(DEFAULT_DATA.seo.structuredData);
+      if (!data.seo.robots) data.seo.robots = deepClone(DEFAULT_DATA.seo.robots);
+      if (!data.seo.structuredData.address) data.seo.structuredData.address = deepClone(DEFAULT_DATA.seo.structuredData.address);
+      if (!data.seo.keywords_tracking) data.seo.keywords_tracking = deepClone(DEFAULT_DATA.seo.keywords_tracking);
+      if (!Array.isArray(data.seo.keywords)) data.seo.keywords = deepClone(DEFAULT_DATA.seo.keywords);
+      if (!data.testimonials) data.testimonials = deepClone(DEFAULT_DATA.testimonials);
+      localStorage.setItem('trivex_site_data', JSON.stringify(data));
+      render();
+      return;
+    }
+  } catch(e) {
+    console.log('Supabase load failed, falling back to localStorage:', e);
+  }
+  // Fallback to localStorage
+  loadData();
+  render();
+})();
 </script>
 </body>
 </html>

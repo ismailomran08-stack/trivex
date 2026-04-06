@@ -1,129 +1,400 @@
 {
+  "faq": {
+    "items": [
+      {
+        "answer": "We operate across all Canadian provinces. Our partners travel to where the work is, ensuring the same quality and direct oversight on every project - coast to coast.",
+        "question": "What areas do you serve?"
+      },
+      {
+        "answer": "We specialize in franchise fit-outs, restaurant builds, medical and dental clinics, office build-outs, and general commercial construction. If it's a commercial space, we build it.",
+        "question": "What types of projects do you take on?"
+      },
+      {
+        "answer": "One of our partners - personally. We don't delegate to junior PMs or third-party managers. The person who gave you the estimate is the person who runs your build.",
+        "question": "Who manages my project?"
+      },
+      {
+        "answer": "Yes. We manage the full scope - from initial permitting through to final municipal inspection and occupancy. You don't have to coordinate anything separately.",
+        "question": "Do you handle permits and inspections?"
+      },
+      {
+        "answer": "Through systems-driven project management, direct partner oversight, and transparent communication. Our track record speaks for itself - 250+ projects delivered on budget.",
+        "question": "How do you ensure projects stay on budget?"
+      },
+      {
+        "answer": "Ownership. Our partners run every project personally. That means faster decisions, higher accountability, and a finished product we stand behind - because our name is on it.",
+        "question": "What makes Trivex different from other contractors?"
+      }
+    ],
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about working with Trivex Group."
+  },
+  "seo": {
+    "og": {
+      "url": "https://trivexgroup.com",
+      "type": "website",
+      "image": "",
+      "title": "",
+      "description": ""
+    },
+    "title": "Commercial Construction Contractor Canada | Franchise & Restaurant Builds | Trivex Group",
+    "robots": {
+      "index": true,
+      "follow": true
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "image": "",
+      "title": "",
+      "description": ""
+    },
+    "keywords": [
+      "franchise construction contractor Canada",
+      "commercial construction company Burlington",
+      "restaurant construction contractor Ontario",
+      "commercial fit out contractor Canada",
+      "medical clinic construction Ontario",
+      "QSR construction contractor",
+      "general contractor commercial Canada"
+    ],
+    "language": "en",
+    "canonical": "https://trivexgroup.com",
+    "description": "Trivex Group is a partner-operated commercial construction contractor specializing in franchise fit-outs, restaurant builds, medical clinics, and office construction across Canada. 250+ projects delivered on time and on budget.",
+    "structuredData": {
+      "url": "https://trivexgroup.com",
+      "logo": "https://trivexgroup.com/wp-content/uploads/2026/01/Trivex-Logo-2.png",
+      "name": "Trivex Group Corp",
+      "email": "info@trivexgroup.com",
+      "phone": "+18888148388",
+      "address": {
+        "city": "Burlington",
+        "postal": "L7L 5H6",
+        "street": "5063 North Service Road",
+        "country": "CA",
+        "province": "ON"
+      },
+      "priceRange": "$$$$",
+      "description": "Partner-operated commercial construction and general contracting firm.",
+      "serviceArea": [
+        "Ontario",
+        "Nova Scotia",
+        "New Brunswick",
+        "Newfoundland",
+        "PEI",
+        "Manitoba",
+        "Saskatchewan",
+        "Alberta"
+      ],
+      "socialProfiles": [
+        "https://www.linkedin.com/company/trivex-group-corp"
+      ]
+    },
+    "keywords_tracking": [
+      {
+        "notes": "",
+        "keyword": "franchise construction contractor Canada",
+        "positions": [],
+        "targetUrl": "/"
+      },
+      {
+        "notes": "",
+        "keyword": "commercial construction company Burlington",
+        "positions": [],
+        "targetUrl": "/"
+      },
+      {
+        "notes": "",
+        "keyword": "restaurant construction contractor Ontario",
+        "positions": [],
+        "targetUrl": "/"
+      },
+      {
+        "notes": "",
+        "keyword": "commercial fit out contractor Canada",
+        "positions": [],
+        "targetUrl": "/"
+      },
+      {
+        "notes": "",
+        "keyword": "medical clinic construction Ontario",
+        "positions": [],
+        "targetUrl": "/"
+      },
+      {
+        "notes": "",
+        "keyword": "QSR construction contractor",
+        "positions": [],
+        "targetUrl": "/"
+      },
+      {
+        "notes": "",
+        "keyword": "general contractor commercial Canada",
+        "positions": [],
+        "targetUrl": "/"
+      }
+    ],
+    "googleVerification": ""
+  },
   "hero": {
     "badge": "Now Operating Across All Canadian Provinces",
-    "titleLine1": "Partner-Operated",
-    "titleLine2": "Commercial Construction.",
-    "description": "50+ completed projects across 8 Provinces. Franchise fit-outs, medical clinics, restaurant builds, and commercial spaces, led personally by the partners, every time.",
     "mainImage": "https://trivexgroup.com/wp-content/uploads/2026/02/20240610_210026-600x600.jpg",
+    "statLabel": "Projects",
     "floatImage": "https://trivexgroup.com/wp-content/uploads/2026/02/20250308_201937-600x600.jpg",
     "statNumber": "50+",
-    "statLabel": "Projects"
+    "titleLine1": "Partner-Operated",
+    "titleLine2": "Commercial Construction.",
+    "description": "50+ completed projects across 8 Provinces. Franchise fit-outs, medical clinics, restaurant builds, and commercial spaces, led personally by the partners, every time."
+  },
+  "about": {
+    "title": "Built by Operators,<br>for Operators.",
+    "images": [
+      "https://trivexgroup.com/wp-content/uploads/2026/02/20250308_201937-600x600.jpg",
+      "https://trivexgroup.com/wp-content/uploads/2026/02/20230328_175254-600x600.jpg",
+      "https://trivexgroup.com/wp-content/uploads/2026/02/20220708_093432-1-600x600.jpg",
+      "https://trivexgroup.com/wp-content/uploads/2026/02/20240610_210026-600x600.jpg"
+    ],
+    "features": [
+      "Excellent Engineering",
+      "Grade #1 Materials",
+      "Structures with Long Life",
+      "Full Accountability",
+      "Modern & Up to Date",
+      "Safety First Approach"
+    ],
+    "paragraphs": [
+      "Trivex Group Corp was founded on a simple idea: the people who own the company should be the ones running the projects. We're not a firm that hands you off to a junior project manager after signing - our partners are personally involved in every build, every decision, and every handoff.",
+      "With over 250 completed projects across Canada, we've built a reputation for doing things the right way - no shortcuts, no compromises, and no excuses. From franchise fit-outs and restaurant builds to medical clinics and commercial spaces, we deliver on time, on budget, and to a standard we'd put our name on."
+    ]
   },
   "stats": [
     {
-      "target": 50,
+      "label": "Projects Completed",
       "suffix": "+",
-      "label": "Projects Completed"
+      "target": 50
     },
     {
-      "target": 20,
+      "label": "Years of Experience",
       "suffix": "+",
-      "label": "Years of Experience"
+      "target": 20
     },
     {
-      "target": 10,
+      "label": "Expert Members",
       "suffix": "+",
-      "label": "Expert Members"
+      "target": 10
     },
     {
-      "target": 8,
+      "label": "Provinces Covered",
       "suffix": "",
-      "label": "Provinces Covered"
+      "target": 8
     }
   ],
-  "whyTrivex": {
-    "title": "The Difference Is Ownership",
-    "subtitle": "We don't send project managers - we show up ourselves. Every project is partner-led from estimate to handoff.",
-    "cards": [
+  "clients": {
+    "logos": [
       {
-        "title": "Partner-Operated",
-        "description": "Every project is led personally by one of our partners, not delegated to a junior PM. You work directly with the people who own the company."
+        "alt": "Boustan",
+        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/11.png"
       },
       {
-        "title": "Coast-to-Coast",
-        "description": "We operate across 8 Canadian provinces with local knowledge and national reach. Wherever your project is, we're already there."
+        "alt": "barBurrito",
+        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/6.png"
       },
       {
-        "title": "Systems-Driven",
-        "description": "Our internal systems track every phase, every dollar, and every deadline. Nothing slips through the cracks because nothing is left to chance."
+        "alt": "Pizza Hut",
+        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/10.png"
       },
       {
-        "title": "Grade #1 Materials",
-        "description": "We use only top-grade materials on every project. No substitutions, no cutting corners - just quality you can see and feel in the finished product."
+        "alt": "Pizza Pizza",
+        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/7.png"
       },
       {
-        "title": "Faster Decision-Making",
-        "description": "Because the partners run every project directly, decisions happen in hours - not days. No layers of approval means your project moves faster."
+        "alt": "Lazeez Shawarma",
+        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/9.png"
       },
       {
-        "title": "Zero Tolerance Safety",
-        "description": "Safety isn't a checkbox - it's built into how we operate. Our job sites follow strict safety protocols with zero tolerance for shortcuts."
+        "alt": "Wings Up",
+        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/5.png"
+      },
+      {
+        "alt": "La Prep",
+        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/4.png"
+      },
+      {
+        "alt": "Bobby's Burger",
+        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/1.png"
+      },
+      {
+        "alt": "Burgers on Fleek",
+        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/3.png"
+      },
+      {
+        "alt": "Shelby's Shawarma",
+        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/13.png"
+      },
+      {
+        "alt": "Chaska",
+        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/14.png"
       }
-    ]
+    ],
+    "title": "Trusted by Industry Leaders",
+    "subtitle": "We've built for some of the biggest names in franchising and commercial construction across Canada."
+  },
+  "contact": {
+    "email": "info@trivexgroup.com",
+    "phone": "+1 (888) 814-8388",
+    "address": "5063 North Service Road, Burlington ON L7L 5H6",
+    "formTitle": "Get a Free Quote"
   },
   "services": {
-    "title": "What We Do",
-    "subtitle": "From franchise fit-outs to full commercial builds, we deliver every project with the same standard: partner-led, on time, and on budget.",
     "items": [
       {
-        "title": "Franchise Construction",
-        "description": "End-to-end franchise builds for restaurant and retail brands. We handle everything from permitting to final punch list, ensuring brand compliance and on-time delivery.",
         "image": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800",
-        "isWide": true
+        "title": "Franchise Construction",
+        "isWide": true,
+        "description": "End-to-end franchise builds for restaurant and retail brands. We handle everything from permitting to final punch list, ensuring brand compliance and on-time delivery."
       },
       {
-        "title": "Restaurant Construction",
-        "description": "Complete restaurant builds including kitchen, dining, and bar areas - from base building to turnkey handover.",
         "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800",
-        "isWide": false
+        "title": "Restaurant Construction",
+        "isWide": false,
+        "description": "Complete restaurant builds including kitchen, dining, and bar areas - from base building to turnkey handover."
       },
       {
-        "title": "Clinic Construction",
-        "description": "Specialized medical and dental clinic builds with proper ventilation, plumbing, and sanitation-grade finishes.",
         "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800",
-        "isWide": false
+        "title": "Clinic Construction",
+        "isWide": false,
+        "description": "Specialized medical and dental clinic builds with proper ventilation, plumbing, and sanitation-grade finishes."
       },
       {
-        "title": "Office & Commercial Build-Outs",
-        "description": "Modern office and commercial space build-outs tailored to your workflow and brand.",
         "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
-        "isWide": false
+        "title": "Office & Commercial Build-Outs",
+        "isWide": false,
+        "description": "Modern office and commercial space build-outs tailored to your workflow and brand."
       },
       {
-        "title": "General Contracting",
-        "description": "Full-scope general contracting services for commercial projects of all sizes.",
         "image": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800",
-        "isWide": false
+        "title": "General Contracting",
+        "isWide": false,
+        "description": "Full-scope general contracting services for commercial projects of all sizes."
       },
       {
-        "title": "Commercial Fit-Outs",
-        "description": "Interior fit-outs for retail, food service, and professional spaces - fast turnaround with zero compromises on quality.",
         "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
-        "isWide": false
+        "title": "Commercial Fit-Outs",
+        "isWide": false,
+        "description": "Interior fit-outs for retail, food service, and professional spaces - fast turnaround with zero compromises on quality."
       }
-    ]
+    ],
+    "title": "What We Do",
+    "subtitle": "From franchise fit-outs to full commercial builds, we deliver every project with the same standard: partner-led, on time, and on budget."
   },
+  "ctaBanner": {
+    "phone": "+1 (888) 814-8388",
+    "title": "Let's Build Something Together",
+    "buttonText": "Get a Free Quote",
+    "description": "Ready to start your next commercial project? Get in touch with our team for a free consultation."
+  },
+  "lastSaved": "2026-04-06T13:15:30.966Z",
   "portfolio": {
     "title": "Our Work",
-    "subtitle": "A selection of projects completed by our partners across Canada.",
-    "projectOrder": [
-      "twinlake",
-      "barburrito",
-      "mezza",
-      "boustan",
-      "mmfood",
-      "zoelicious"
-    ],
     "projects": {
+      "mmfood": {
+        "id": "mmfood",
+        "name": "M&M Food Market",
+        "type": "Fit-Out & Facelift",
+        "image": "https://trivexgroup.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-24-at-3.33.42-PM-600x600.jpeg",
+        "scope": [
+          "Interior renovation",
+          "Store facelift",
+          "Finishes upgrade",
+          "Customer-facing element updates",
+          "Brand standards alignment",
+          "Efficient 5-day execution"
+        ],
+        "stats": [
+          {
+            "val": "1,100",
+            "label": "Sq. Ft."
+          },
+          {
+            "val": "5 Days",
+            "label": "Completion"
+          },
+          {
+            "val": "100%",
+            "label": "On Budget"
+          }
+        ],
+        "address": "610 Lakeview Dr, Kenora, ON P9N 3V2",
+        "gallery": [
+          "https://trivexgroup.com/wp-content/uploads/2026/01/Kenora-.jpeg",
+          "https://trivexgroup.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-24-at-3.33.42-PM.jpeg",
+          "https://trivexgroup.com/wp-content/uploads/2026/01/mm-kenora-1.jpeg",
+          "https://trivexgroup.com/wp-content/uploads/2026/01/mm-kenora-2.jpeg",
+          "https://trivexgroup.com/wp-content/uploads/2026/01/mm-kenora-3.jpeg",
+          "https://trivexgroup.com/wp-content/uploads/2026/01/mm-kenora.jpeg",
+          "https://trivexgroup.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-24-at-3.33.43-PM.jpeg"
+        ],
+        "approach": "Precision planning and efficient execution allowed the team to deliver a complete transformation in just 5 days - on time and on budget.",
+        "location": "Kenora, Ontario",
+        "overview": "Rapid store facelift and fit-out for M&M Food Market in Kenora, completed in just 5 days.",
+        "cardImage": "https://trivexgroup.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-24-at-3.33.42-PM-600x600.jpeg",
+        "challenge": "Completing a full store facelift within a 5-day window to minimize business disruption.",
+        "completed": "January 2026"
+      },
+      "boustan": {
+        "id": "boustan",
+        "name": "Boustan",
+        "type": "Commercial Construction & Fit-Out",
+        "image": "https://trivexgroup.com/wp-content/uploads/2026/01/Boustan-Fredericton.webp",
+        "scope": [
+          "Full interior construction",
+          "Mechanical & electrical coordination",
+          "Custom finishes",
+          "Kitchen integration",
+          "Franchise compliance",
+          "Turnkey handover",
+          "Disciplined project management",
+          "Municipal inspections"
+        ],
+        "stats": [
+          {
+            "val": "1,400",
+            "label": "Sq. Ft."
+          },
+          {
+            "val": "On Time",
+            "label": "Completion"
+          },
+          {
+            "val": "100%",
+            "label": "On Budget"
+          }
+        ],
+        "address": "220 Two Nations Crossing B, Fredericton, NB E3A 0X9",
+        "gallery": [
+          "https://trivexgroup.com/wp-content/uploads/2026/01/Boustan-Fredericton.webp"
+        ],
+        "approach": "Partner-led from day one with direct oversight on every trade, ensuring franchise standards and municipal requirements were met simultaneously.",
+        "location": "Fredericton, New Brunswick",
+        "overview": "Full franchise construction for Boustan restaurant in Fredericton, New Brunswick.",
+        "cardImage": "https://trivexgroup.com/wp-content/uploads/2026/01/Boustan-Fredericton.webp",
+        "challenge": "Coordinating all trades and municipal requirements for a franchise build in a new market.",
+        "completed": "June 2025"
+      },
       "twinlake": {
         "id": "twinlake",
         "name": "Twin Lake Veterinary Hospital",
-        "location": "Orillia, Ontario",
-        "address": "1080 Mississaga St W, Orillia, ON L3V 3C8",
-        "completed": "August 2023",
         "type": "Commercial Construction & Fit-Out",
         "image": "https://trivexgroup.com/wp-content/uploads/2026/02/20220708_093432-1-600x600.jpg",
-        "cardImage": "https://trivexgroup.com/wp-content/uploads/2026/02/20220708_093432-1-600x600.jpg",
+        "scope": [
+          "Full interior construction",
+          "Mechanical & electrical coordination",
+          "Medical-grade plumbing",
+          "Clinical-grade finishes",
+          "Custom millwork integration",
+          "Healthcare standards compliance",
+          "Sanitation requirements",
+          "Workflow optimization"
+        ],
         "stats": [
           {
             "val": "4,500",
@@ -138,19 +409,7 @@
             "label": "On Budget"
           }
         ],
-        "overview": "Complete construction of a 450 sq. ft. clinical space within a 4,500 sq. ft. facility, delivered from base condition to turnkey operational handover.",
-        "scope": [
-          "Full interior construction",
-          "Mechanical & electrical coordination",
-          "Medical-grade plumbing",
-          "Clinical-grade finishes",
-          "Custom millwork integration",
-          "Healthcare standards compliance",
-          "Sanitation requirements",
-          "Workflow optimization"
-        ],
-        "challenge": "The clinic required specialized infrastructure including medical-grade plumbing, enhanced ventilation for clinical areas, and sanitation-compliant finishes.",
-        "approach": "Our partners managed every phase directly - from initial planning through to final inspection. Completed on time and on budget.",
+        "address": "1080 Mississaga St W, Orillia, ON L3V 3C8",
         "gallery": [
           "https://trivexgroup.com/wp-content/uploads/2026/02/20220708_093432-1-600x600.jpg",
           "https://trivexgroup.com/wp-content/uploads/2026/02/20220708_093456-600x600.jpg",
@@ -173,32 +432,19 @@
           "https://trivexgroup.com/wp-content/uploads/2026/02/20220708_093958-600x600.jpg",
           "https://trivexgroup.com/wp-content/uploads/2026/02/20220708_094016-600x600.jpg",
           "https://trivexgroup.com/wp-content/uploads/2026/02/20220708_094032-600x600.jpg"
-        ]
+        ],
+        "approach": "Our partners managed every phase directly - from initial planning through to final inspection. Completed on time and on budget.",
+        "location": "Orillia, Ontario",
+        "overview": "Complete construction of a 450 sq. ft. clinical space within a 4,500 sq. ft. facility, delivered from base condition to turnkey operational handover.",
+        "cardImage": "https://trivexgroup.com/wp-content/uploads/2026/02/20220708_093432-1-600x600.jpg",
+        "challenge": "The clinic required specialized infrastructure including medical-grade plumbing, enhanced ventilation for clinical areas, and sanitation-compliant finishes.",
+        "completed": "August 2023"
       },
       "barburrito": {
         "id": "barburrito",
         "name": "barBurrito",
-        "location": "Ottawa, Ontario",
-        "address": "Ottawa, ON",
-        "completed": "November 2022",
         "type": "Commercial Construction & Fit-Out",
         "image": "https://trivexgroup.com/wp-content/uploads/2026/02/20240610_210026-600x600.jpg",
-        "cardImage": "https://trivexgroup.com/wp-content/uploads/2026/02/20240610_210026-600x600.jpg",
-        "stats": [
-          {
-            "val": "Turnkey",
-            "label": "Delivery"
-          },
-          {
-            "val": "On Time",
-            "label": "Completion"
-          },
-          {
-            "val": "100%",
-            "label": "On Budget"
-          }
-        ],
-        "overview": "Complete commercial construction and fit-out for barBurrito franchise location in Ottawa.",
         "scope": [
           "Full interior build-out",
           "Mechanical & electrical coordination",
@@ -209,26 +455,6 @@
           "Project scheduling & coordination",
           "Site supervision & inspections"
         ],
-        "challenge": "Required full compliance with barBurrito corporate design standards while working within the constraints of the existing retail space.",
-        "approach": "Partner-led execution from start to finish, ensuring brand standards were met at every stage while maintaining schedule integrity.",
-        "gallery": [
-          "https://trivexgroup.com/wp-content/uploads/2026/02/20240610_205957-600x600.jpg",
-          "https://trivexgroup.com/wp-content/uploads/2026/02/20240610_205959-600x600.jpg",
-          "https://trivexgroup.com/wp-content/uploads/2026/02/20240610_210005-600x600.jpg",
-          "https://trivexgroup.com/wp-content/uploads/2026/02/20240610_210012-600x600.jpg",
-          "https://trivexgroup.com/wp-content/uploads/2026/02/20240610_210026-600x600.jpg",
-          "https://trivexgroup.com/wp-content/uploads/2026/02/20240610_205818-600x600.jpg"
-        ]
-      },
-      "mezza": {
-        "id": "mezza",
-        "name": "Mezza Lebanese Kitchen",
-        "location": "Bridgewater, Nova Scotia",
-        "address": "215 Dominion St, Bridgewater, NS B4V 9B1",
-        "completed": "January 2025",
-        "type": "Commercial Construction & Fit-Out",
-        "image": "https://trivexgroup.com/wp-content/uploads/2026/02/20250308_201937-600x600.jpg",
-        "cardImage": "https://trivexgroup.com/wp-content/uploads/2026/02/20250308_201937-600x600.jpg",
         "stats": [
           {
             "val": "Turnkey",
@@ -240,130 +466,40 @@
           },
           {
             "val": "100%",
-            "label": "Brand Compliant"
-          }
-        ],
-        "overview": "Complete franchise build-out for Mezza Lebanese Kitchen in Bridgewater, Nova Scotia.",
-        "scope": [
-          "Complete interior build-out",
-          "Mechanical & electrical coordination",
-          "Custom millwork & finishes",
-          "Commercial kitchen installation",
-          "Franchise specification compliance",
-          "Consultant & trade coordination",
-          "Disciplined scheduling",
-          "Full turnkey handover"
-        ],
-        "challenge": "Delivering a turnkey franchise location in a smaller market while maintaining the same quality and compliance standards as urban builds.",
-        "approach": "Direct partner oversight from mobilization through to handover, with tight coordination of all trades and franchise consultants.",
-        "gallery": [
-          "https://trivexgroup.com/wp-content/uploads/2026/02/20250308_202020-600x600.jpg",
-          "https://trivexgroup.com/wp-content/uploads/2026/02/20250308_201937-600x600.jpg",
-          "https://trivexgroup.com/wp-content/uploads/2026/02/20250308_201713-600x600.jpg",
-          "https://trivexgroup.com/wp-content/uploads/2026/02/20250308_201605-600x600.jpg",
-          "https://trivexgroup.com/wp-content/uploads/2026/02/20250308_201453-600x600.jpg",
-          "https://trivexgroup.com/wp-content/uploads/2026/02/20250308_201430-600x600.jpg",
-          "https://trivexgroup.com/wp-content/uploads/2026/02/20250308_201411-600x600.jpg",
-          "https://trivexgroup.com/wp-content/uploads/2026/02/20250308_201345-600x600.jpg",
-          "https://trivexgroup.com/wp-content/uploads/2026/02/20250308_201331-600x600.jpg",
-          "https://trivexgroup.com/wp-content/uploads/2026/02/20250308_201321-600x600.jpg",
-          "https://trivexgroup.com/wp-content/uploads/2026/02/20250308_201246-600x600.jpg",
-          "https://trivexgroup.com/wp-content/uploads/2026/02/20250308_201225-600x600.jpg"
-        ]
-      },
-      "boustan": {
-        "id": "boustan",
-        "name": "Boustan",
-        "location": "Fredericton, New Brunswick",
-        "address": "220 Two Nations Crossing B, Fredericton, NB E3A 0X9",
-        "completed": "June 2025",
-        "type": "Commercial Construction & Fit-Out",
-        "image": "https://trivexgroup.com/wp-content/uploads/2026/01/Boustan-Fredericton.webp",
-        "cardImage": "https://trivexgroup.com/wp-content/uploads/2026/01/Boustan-Fredericton.webp",
-        "stats": [
-          {
-            "val": "1,400",
-            "label": "Sq. Ft."
-          },
-          {
-            "val": "On Time",
-            "label": "Completion"
-          },
-          {
-            "val": "100%",
             "label": "On Budget"
           }
         ],
-        "overview": "Full franchise construction for Boustan restaurant in Fredericton, New Brunswick.",
-        "scope": [
-          "Full interior construction",
-          "Mechanical & electrical coordination",
-          "Custom finishes",
-          "Kitchen integration",
-          "Franchise compliance",
-          "Turnkey handover",
-          "Disciplined project management",
-          "Municipal inspections"
-        ],
-        "challenge": "Coordinating all trades and municipal requirements for a franchise build in a new market.",
-        "approach": "Partner-led from day one with direct oversight on every trade, ensuring franchise standards and municipal requirements were met simultaneously.",
+        "address": "Ottawa, ON",
         "gallery": [
-          "https://trivexgroup.com/wp-content/uploads/2026/01/Boustan-Fredericton.webp"
-        ]
-      },
-      "mmfood": {
-        "id": "mmfood",
-        "name": "M&M Food Market",
-        "location": "Kenora, Ontario",
-        "address": "610 Lakeview Dr, Kenora, ON P9N 3V2",
-        "completed": "January 2026",
-        "type": "Fit-Out & Facelift",
-        "image": "https://trivexgroup.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-24-at-3.33.42-PM-600x600.jpeg",
-        "cardImage": "https://trivexgroup.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-24-at-3.33.42-PM-600x600.jpeg",
-        "stats": [
-          {
-            "val": "1,100",
-            "label": "Sq. Ft."
-          },
-          {
-            "val": "5 Days",
-            "label": "Completion"
-          },
-          {
-            "val": "100%",
-            "label": "On Budget"
-          }
+          "https://trivexgroup.com/wp-content/uploads/2026/02/20240610_205957-600x600.jpg",
+          "https://trivexgroup.com/wp-content/uploads/2026/02/20240610_205959-600x600.jpg",
+          "https://trivexgroup.com/wp-content/uploads/2026/02/20240610_210005-600x600.jpg",
+          "https://trivexgroup.com/wp-content/uploads/2026/02/20240610_210012-600x600.jpg",
+          "https://trivexgroup.com/wp-content/uploads/2026/02/20240610_210026-600x600.jpg",
+          "https://trivexgroup.com/wp-content/uploads/2026/02/20240610_205818-600x600.jpg"
         ],
-        "overview": "Rapid store facelift and fit-out for M&M Food Market in Kenora, completed in just 5 days.",
-        "scope": [
-          "Interior renovation",
-          "Store facelift",
-          "Finishes upgrade",
-          "Customer-facing element updates",
-          "Brand standards alignment",
-          "Efficient 5-day execution"
-        ],
-        "challenge": "Completing a full store facelift within a 5-day window to minimize business disruption.",
-        "approach": "Precision planning and efficient execution allowed the team to deliver a complete transformation in just 5 days - on time and on budget.",
-        "gallery": [
-          "https://trivexgroup.com/wp-content/uploads/2026/01/Kenora-.jpeg",
-          "https://trivexgroup.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-24-at-3.33.42-PM.jpeg",
-          "https://trivexgroup.com/wp-content/uploads/2026/01/mm-kenora-1.jpeg",
-          "https://trivexgroup.com/wp-content/uploads/2026/01/mm-kenora-2.jpeg",
-          "https://trivexgroup.com/wp-content/uploads/2026/01/mm-kenora-3.jpeg",
-          "https://trivexgroup.com/wp-content/uploads/2026/01/mm-kenora.jpeg",
-          "https://trivexgroup.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-24-at-3.33.43-PM.jpeg"
-        ]
+        "approach": "Partner-led execution from start to finish, ensuring brand standards were met at every stage while maintaining schedule integrity.",
+        "location": "Ottawa, Ontario",
+        "overview": "Complete commercial construction and fit-out for barBurrito franchise location in Ottawa.",
+        "cardImage": "https://trivexgroup.com/wp-content/uploads/2026/02/20240610_210026-600x600.jpg",
+        "challenge": "Required full compliance with barBurrito corporate design standards while working within the constraints of the existing retail space.",
+        "completed": "November 2022"
       },
       "zoelicious": {
         "id": "zoelicious",
         "name": "Zoelicious",
-        "location": "Oakville, Ontario",
-        "address": "3494 Eternity Way, Oakville, ON L6H 0X9",
-        "completed": "June 2023",
         "type": "Commercial Construction & Fit-Out",
         "image": "https://trivexgroup.com/wp-content/uploads/2026/02/20230328_175254-600x600.jpg",
-        "cardImage": "https://trivexgroup.com/wp-content/uploads/2026/02/20230328_175254-600x600.jpg",
+        "scope": [
+          "Plumbing rough-ins",
+          "Electrical rough-ins",
+          "HVAC installation",
+          "Commercial hood exhaust system",
+          "Gas line installation",
+          "General construction",
+          "Engineering letters",
+          "1-year warranty provision"
+        ],
         "stats": [
           {
             "val": "Turnkey",
@@ -378,19 +514,7 @@
             "label": "Warranty"
           }
         ],
-        "overview": "Full commercial construction and fit-out for Zoelicious restaurant in Oakville, including a 1-year warranty provision.",
-        "scope": [
-          "Plumbing rough-ins",
-          "Electrical rough-ins",
-          "HVAC installation",
-          "Commercial hood exhaust system",
-          "Gas line installation",
-          "General construction",
-          "Engineering letters",
-          "1-year warranty provision"
-        ],
-        "challenge": "Coordinating specialized mechanical systems including commercial hood exhaust and gas line installation within a tight retail footprint.",
-        "approach": "Direct partner management ensured every trade was coordinated seamlessly, with engineering documentation and a comprehensive 1-year warranty included.",
+        "address": "3494 Eternity Way, Oakville, ON L6H 0X9",
         "gallery": [
           "https://trivexgroup.com/wp-content/uploads/2026/02/20230328_175254-600x600.jpg",
           "https://trivexgroup.com/wp-content/uploads/2026/02/20230328_175105-600x600.jpg",
@@ -418,281 +542,69 @@
           "https://trivexgroup.com/wp-content/uploads/2026/02/20230328_174952-600x600.jpg",
           "https://trivexgroup.com/wp-content/uploads/2026/02/20230328_175028-600x600.jpg",
           "https://trivexgroup.com/wp-content/uploads/2026/02/20230328_175033-600x600.jpg"
-        ]
+        ],
+        "approach": "Direct partner management ensured every trade was coordinated seamlessly, with engineering documentation and a comprehensive 1-year warranty included.",
+        "location": "Oakville, Ontario",
+        "overview": "Full commercial construction and fit-out for Zoelicious restaurant in Oakville, including a 1-year warranty provision.",
+        "cardImage": "https://trivexgroup.com/wp-content/uploads/2026/02/20230328_175254-600x600.jpg",
+        "challenge": "Coordinating specialized mechanical systems including commercial hood exhaust and gas line installation within a tight retail footprint.",
+        "completed": "June 2023"
       }
-    }
+    },
+    "subtitle": "A selection of projects completed by our partners across Canada.",
+    "projectOrder": [
+      "twinlake",
+      "barburrito",
+      "boustan",
+      "mmfood",
+      "zoelicious"
+    ]
+  },
+  "whyTrivex": {
+    "cards": [
+      {
+        "title": "Partner-Operated",
+        "description": "Every project is led personally by one of our partners, not delegated to a junior PM. You work directly with the people who own the company."
+      },
+      {
+        "title": "Coast-to-Coast",
+        "description": "We operate across 8 Canadian provinces with local knowledge and national reach. Wherever your project is, we're already there."
+      },
+      {
+        "title": "Systems-Driven",
+        "description": "Our internal systems track every phase, every dollar, and every deadline. Nothing slips through the cracks because nothing is left to chance."
+      },
+      {
+        "title": "Grade #1 Materials",
+        "description": "We use only top-grade materials on every project. No substitutions, no cutting corners - just quality you can see and feel in the finished product."
+      },
+      {
+        "title": "Faster Decision-Making",
+        "description": "Because the partners run every project directly, decisions happen in hours - not days. No layers of approval means your project moves faster."
+      },
+      {
+        "title": "Zero Tolerance Safety",
+        "description": "Safety isn't a checkbox - it's built into how we operate. Our job sites follow strict safety protocols with zero tolerance for shortcuts."
+      }
+    ],
+    "title": "The Difference Is Ownership",
+    "subtitle": "We don't send project managers - we show up ourselves. Every project is partner-led from estimate to handoff."
   },
   "testimonials": {
     "items": [
       {
-        "quote": "Trivex delivered our franchise location three days ahead of schedule. You could tell they cared about the quality as much as we did. Best contractor experience we've had.",
         "name": "Mike Constantine",
         "role": "Franchise Owner, QSR",
+        "quote": "Trivex delivered our franchise location three days ahead of schedule. You could tell they cared about the quality as much as we did. Best contractor experience we've had.",
         "initials": "MC"
       },
       {
-        "quote": "We needed our dental clinic operational within a tight timeline and Trivex made it happen. They understood the unique requirements of a medical build-out and handled everything from permitting to final inspection seamlessly.",
         "name": "Dr. Sarah Rowa",
         "role": "Owner, Dental Clinic",
+        "quote": "We needed our dental clinic operational within a tight timeline and Trivex made it happen. They understood the unique requirements of a medical build-out and handled everything from permitting to final inspection seamlessly.",
         "initials": "SR"
       }
     ]
   },
-  "clients": {
-    "title": "Trusted by Industry Leaders",
-    "subtitle": "We've built for some of the biggest names in franchising and commercial construction across Canada.",
-    "logos": [
-      {
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/11.png",
-        "alt": "Boustan"
-      },
-      {
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/6.png",
-        "alt": "barBurrito"
-      },
-      {
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/10.png",
-        "alt": "Pizza Hut"
-      },
-      {
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/7.png",
-        "alt": "Pizza Pizza"
-      },
-      {
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/9.png",
-        "alt": "Lazeez Shawarma"
-      },
-      {
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/8.png",
-        "alt": "Mezza"
-      },
-      {
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/5.png",
-        "alt": "Wings Up"
-      },
-      {
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/4.png",
-        "alt": "La Prep"
-      },
-      {
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/1.png",
-        "alt": "Bobby's Burger"
-      },
-      {
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/2.png",
-        "alt": "Ozzy's Burger"
-      },
-      {
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/3.png",
-        "alt": "Burgers on Fleek"
-      },
-      {
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/13.png",
-        "alt": "Shelby's Shawarma"
-      },
-      {
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/14.png",
-        "alt": "Chaska"
-      },
-      {
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/12.png",
-        "alt": "Cozella"
-      },
-      {
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/Untitled-design-12.png",
-        "alt": "Elite Franchise 100"
-      },
-      {
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/15.png",
-        "alt": "Voltalinx"
-      },
-      {
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/16.png",
-        "alt": "SFG Contracting"
-      },
-      {
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/Untitled-design-14.png",
-        "alt": "Scalio"
-      },
-      {
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/Untitled-design-13.png",
-        "alt": "Partner"
-      },
-      {
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/LIO.png",
-        "alt": "Partner"
-      }
-    ]
-  },
-  "about": {
-    "title": "Built by Operators,<br>for Operators.",
-    "paragraphs": [
-      "Trivex Group Corp was founded on a simple idea: the people who own the company should be the ones running the projects. We're not a firm that hands you off to a junior project manager after signing - our partners are personally involved in every build, every decision, and every handoff.",
-      "With over 250 completed projects across Canada, we've built a reputation for doing things the right way - no shortcuts, no compromises, and no excuses. From franchise fit-outs and restaurant builds to medical clinics and commercial spaces, we deliver on time, on budget, and to a standard we'd put our name on."
-    ],
-    "features": [
-      "Excellent Engineering",
-      "Grade #1 Materials",
-      "Structures with Long Life",
-      "Full Accountability",
-      "Modern & Up to Date",
-      "Safety First Approach"
-    ],
-    "images": [
-      "https://trivexgroup.com/wp-content/uploads/2026/02/20250308_201937-600x600.jpg",
-      "https://trivexgroup.com/wp-content/uploads/2026/02/20230328_175254-600x600.jpg",
-      "https://trivexgroup.com/wp-content/uploads/2026/02/20220708_093432-1-600x600.jpg",
-      "https://trivexgroup.com/wp-content/uploads/2026/02/20240610_210026-600x600.jpg"
-    ]
-  },
-  "faq": {
-    "title": "Frequently Asked Questions",
-    "subtitle": "Everything you need to know about working with Trivex Group.",
-    "items": [
-      {
-        "question": "What areas do you serve?",
-        "answer": "We operate across all Canadian provinces. Our partners travel to where the work is, ensuring the same quality and direct oversight on every project - coast to coast."
-      },
-      {
-        "question": "What types of projects do you take on?",
-        "answer": "We specialize in franchise fit-outs, restaurant builds, medical and dental clinics, office build-outs, and general commercial construction. If it's a commercial space, we build it."
-      },
-      {
-        "question": "Who manages my project?",
-        "answer": "One of our partners - personally. We don't delegate to junior PMs or third-party managers. The person who gave you the estimate is the person who runs your build."
-      },
-      {
-        "question": "Do you handle permits and inspections?",
-        "answer": "Yes. We manage the full scope - from initial permitting through to final municipal inspection and occupancy. You don't have to coordinate anything separately."
-      },
-      {
-        "question": "How do you ensure projects stay on budget?",
-        "answer": "Through systems-driven project management, direct partner oversight, and transparent communication. Our track record speaks for itself - 250+ projects delivered on budget."
-      },
-      {
-        "question": "What makes Trivex different from other contractors?",
-        "answer": "Ownership. Our partners run every project personally. That means faster decisions, higher accountability, and a finished product we stand behind - because our name is on it."
-      }
-    ]
-  },
-  "ctaBanner": {
-    "title": "Let's Build Something Together",
-    "description": "Ready to start your next commercial project? Get in touch with our team for a free consultation.",
-    "buttonText": "Get a Free Quote",
-    "phone": "+1 (888) 814-8388"
-  },
-  "contact": {
-    "phone": "+1 (888) 814-8388",
-    "email": "info@trivexgroup.com",
-    "address": "5063 North Service Road, Burlington ON L7L 5H6",
-    "formTitle": "Get a Free Quote"
-  },
-  "seo": {
-    "title": "Commercial Construction Contractor Canada | Franchise & Restaurant Builds | Trivex Group",
-    "description": "Trivex Group is a partner-operated commercial construction contractor specializing in franchise fit-outs, restaurant builds, medical clinics, and office construction across Canada. 250+ projects delivered on time and on budget.",
-    "keywords": [
-      "franchise construction contractor Canada",
-      "commercial construction company Burlington",
-      "restaurant construction contractor Ontario",
-      "commercial fit out contractor Canada",
-      "medical clinic construction Ontario",
-      "QSR construction contractor",
-      "general contractor commercial Canada"
-    ],
-    "canonical": "https://trivexgroup.com",
-    "og": {
-      "title": "",
-      "description": "",
-      "image": "",
-      "type": "website",
-      "url": "https://trivexgroup.com"
-    },
-    "twitter": {
-      "card": "summary_large_image",
-      "title": "",
-      "description": "",
-      "image": ""
-    },
-    "structuredData": {
-      "name": "Trivex Group Corp",
-      "logo": "https://trivexgroup.com/wp-content/uploads/2026/01/Trivex-Logo-2.png",
-      "description": "Partner-operated commercial construction and general contracting firm.",
-      "address": {
-        "street": "5063 North Service Road",
-        "city": "Burlington",
-        "province": "ON",
-        "postal": "L7L 5H6",
-        "country": "CA"
-      },
-      "phone": "+18888148388",
-      "email": "info@trivexgroup.com",
-      "url": "https://trivexgroup.com",
-      "socialProfiles": [
-        "https://www.linkedin.com/company/trivex-group-corp"
-      ],
-      "serviceArea": [
-        "Ontario",
-        "Nova Scotia",
-        "New Brunswick",
-        "Newfoundland",
-        "PEI",
-        "Manitoba",
-        "Saskatchewan",
-        "Alberta"
-      ],
-      "priceRange": "$$$$"
-    },
-    "robots": {
-      "index": true,
-      "follow": true
-    },
-    "googleVerification": "",
-    "language": "en",
-    "keywords_tracking": [
-      {
-        "keyword": "franchise construction contractor Canada",
-        "targetUrl": "/",
-        "positions": [],
-        "notes": ""
-      },
-      {
-        "keyword": "commercial construction company Burlington",
-        "targetUrl": "/",
-        "positions": [],
-        "notes": ""
-      },
-      {
-        "keyword": "restaurant construction contractor Ontario",
-        "targetUrl": "/",
-        "positions": [],
-        "notes": ""
-      },
-      {
-        "keyword": "commercial fit out contractor Canada",
-        "targetUrl": "/",
-        "positions": [],
-        "notes": ""
-      },
-      {
-        "keyword": "medical clinic construction Ontario",
-        "targetUrl": "/",
-        "positions": [],
-        "notes": ""
-      },
-      {
-        "keyword": "QSR construction contractor",
-        "targetUrl": "/",
-        "positions": [],
-        "notes": ""
-      },
-      {
-        "keyword": "general contractor commercial Canada",
-        "targetUrl": "/",
-        "positions": [],
-        "notes": ""
-      }
-    ]
-  },
-  "lastSaved": "2026-03-23T13:52:30.088Z",
   "adminDeployed": true
 }
