@@ -3,214 +3,322 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Share Your Experience | Trivex Group</title>
-<meta name="description" content="Share your experience working with Trivex Group. Your feedback helps us improve and helps future clients make informed decisions.">
-<meta name="robots" content="noindex, nofollow">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<title>Trivex Group — Client Testimonial</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --navy:#0F1B2D;--navy-light:#162236;--navy-dark:#0A1220;
-  --orange:#E8500A;--orange-hover:#D04508;
-  --white:#FFFFFF;--gray:#94A3B8;--border:rgba(255,255,255,0.08);
-}
-body{font-family:'Inter',-apple-system,sans-serif;background:var(--navy);color:var(--white);-webkit-font-smoothing:antialiased;min-height:100vh}
-a{text-decoration:none;color:inherit}
-
-/* NAV */
-.nav{padding:24px 0;border-bottom:1px solid var(--border)}
-.nav-inner{max-width:800px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
-.nav-logo{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;letter-spacing:-.02em}
-.nav-logo span{color:var(--orange)}
-.nav-back{font-size:13px;color:var(--gray);transition:color .2s;display:flex;align-items:center;gap:6px}
-.nav-back:hover{color:var(--white)}
-
-/* MAIN */
-.main{max-width:640px;margin:0 auto;padding:60px 24px 80px}
-.badge{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--orange);background:rgba(232,80,10,.1);padding:6px 14px;border-radius:20px;margin-bottom:20px}
-h1{font-family:'Space Grotesk',sans-serif;font-size:36px;font-weight:700;letter-spacing:-.03em;line-height:1.15;margin-bottom:12px}
-.subtitle{font-size:16px;color:var(--gray);line-height:1.6;margin-bottom:48px}
-
-/* FORM */
-.form-group{margin-bottom:24px}
-.form-group label{display:block;font-size:13px;font-weight:600;margin-bottom:6px;color:rgba(255,255,255,.85)}
-.form-group .hint{font-weight:400;color:var(--gray);font-size:11px;margin-left:4px}
-input[type="text"],input[type="email"],input[type="tel"],textarea,select{
-  width:100%;padding:12px 16px;background:var(--navy-light);border:1px solid var(--border);
-  border-radius:10px;color:var(--white);font-family:'Inter',sans-serif;font-size:14px;
-  outline:none;transition:border-color .2s,box-shadow .2s
-}
-input:focus,textarea:focus,select:focus{border-color:var(--orange);box-shadow:0 0 0 3px rgba(232,80,10,.12)}
-input::placeholder,textarea::placeholder{color:rgba(255,255,255,.25)}
-textarea{resize:vertical;min-height:120px;line-height:1.6}
-select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
-select option{background:var(--navy);color:var(--white)}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-
-/* STARS */
-.star-rating{display:flex;gap:6px;margin-top:4px}
-.star-rating input{display:none}
-.star-rating label{cursor:pointer;font-size:28px;color:rgba(255,255,255,.15);transition:color .15s}
-.star-rating label:hover,.star-rating label:hover~label{color:var(--orange)}
-.star-rating input:checked~label{color:rgba(255,255,255,.15)}
-.star-rating input:checked+label,.star-rating input:checked+label~.star-rating label{color:var(--orange)}
-/* Reverse order trick for CSS-only stars */
-.star-rating{direction:rtl}
-.star-rating label:hover,.star-rating label:hover~label{color:var(--orange) !important}
-
-/* SUBMIT */
-.btn-submit{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:14px 32px;background:var(--orange);color:var(--white);
-  font-family:'Inter',sans-serif;font-size:15px;font-weight:600;
-  border:none;border-radius:10px;cursor:pointer;transition:background .2s;
-  width:100%;justify-content:center
-}
-.btn-submit:hover{background:var(--orange-hover)}
-.btn-submit:disabled{opacity:.6;cursor:not-allowed}
-.btn-submit svg{width:18px;height:18px}
-
-/* SUCCESS / ERROR */
-[data-fs-success]{display:none}
-[data-fs-success].fs-success-show,
-form.fs-succeeded+[data-fs-success],
-[data-fs-success]:not(:empty){
-  display:block;text-align:center;padding:60px 20px
-}
-.success-icon{width:64px;height:64px;background:rgba(232,80,10,.12);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;margin-bottom:20px}
-.success-icon svg{width:32px;height:32px;color:var(--orange)}
-.success-title{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;margin-bottom:8px}
-.success-text{color:var(--gray);font-size:15px;line-height:1.6}
-[data-fs-error]{color:#EF4444;font-size:12px;margin-top:4px;min-height:0}
-[data-fs-error]:not(:empty){margin-top:6px}
-.form-error{color:#EF4444;font-size:13px;text-align:center;margin-bottom:16px}
-
-/* FOOTER */
-.footer{border-top:1px solid var(--border);padding:24px 0;text-align:center}
-.footer p{font-size:12px;color:rgba(255,255,255,.3)}
-
-/* CONSENT */
-.consent{display:flex;gap:10px;align-items:flex-start;margin-bottom:28px}
-.consent input[type="checkbox"]{width:18px;height:18px;accent-color:var(--orange);margin-top:2px;flex-shrink:0}
-.consent label{font-size:12.5px;color:var(--gray);line-height:1.5;cursor:pointer}
-
-@media(max-width:600px){
-  h1{font-size:28px}
-  .row2{grid-template-columns:1fr}
-  .main{padding:40px 20px 60px}
-}
+  :root {
+    --navy:#1E243A; --orange:#E8451C;
+    --orange-light:rgba(232,69,28,0.08); --orange-mid:rgba(232,69,28,0.22);
+    --off-white:#F5F4F0; --white:#FFFFFF; --ink:#0F1D35;
+    --muted:#7A7A8C; --border:#E2E1DC; --field-bg:#FAFAF8;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--off-white);font-family:'Inter',sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:48px 20px;}
+  .card{width:100%;max-width:640px;background:var(--white);border-radius:16px;overflow:hidden;box-shadow:0 2px 4px rgba(15,29,53,0.05),0 16px 48px rgba(15,29,53,0.11);animation:rise 0.5s cubic-bezier(.22,.61,.36,1) both;}
+  @keyframes rise{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+  .header{background:var(--navy);padding:16px 44px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
+  .header-logo img{height:120px;width:auto;display:block;}
+  .header-right{text-align:right;flex-shrink:0;}
+  .header-tagline{font-size:8.5px;font-weight:600;letter-spacing:2px;color:rgba(255,255,255,0.35);text-transform:uppercase;margin-bottom:10px;}
+  .header-sub{font-size:13px;color:rgba(255,255,255,0.65);font-weight:300;line-height:1.6;text-align:right;}
+  .header-sub strong{color:rgba(255,255,255,0.9);font-weight:600;}
+  .body{padding:36px 44px 42px;}
+  .section-title{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:18px;}
+  hr.divider{border:none;border-top:1px solid var(--border);margin:26px 0;}
+  .row{display:flex;gap:14px;} .row .field{flex:1;}
+  .field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
+  label{font-size:11px;font-weight:600;letter-spacing:0.7px;text-transform:uppercase;color:var(--ink);}
+  input[type="text"],textarea{background:var(--field-bg);border:1.5px solid var(--border);border-radius:8px;color:var(--ink);font-family:'Inter',sans-serif;font-size:14px;padding:11px 14px;width:100%;outline:none;transition:border-color 0.18s,box-shadow 0.18s;resize:none;}
+  input::placeholder,textarea::placeholder{color:#C8C7C0;}
+  input:focus,textarea:focus{border-color:var(--orange);box-shadow:0 0 0 3px var(--orange-light);background:var(--white);}
+  textarea{min-height:82px;line-height:1.6;}
+  .delivery-block{background:var(--off-white);border-radius:10px;padding:4px 0;margin-bottom:14px;}
+  .check-row{display:flex;align-items:center;justify-content:space-between;padding:11px 16px;border-bottom:1px solid var(--border);gap:12px;}
+  .check-row:last-child{border-bottom:none;}
+  .check-question{font-size:13.5px;color:var(--ink);font-weight:400;line-height:1.4;flex:1;}
+  .yn-group{display:flex;gap:6px;flex-shrink:0;}
+  .yn-btn{border:1.5px solid var(--border);background:var(--white);border-radius:6px;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;padding:6px 14px;cursor:pointer;color:var(--muted);transition:all 0.15s;user-select:none;}
+  .yn-btn:hover{border-color:#B0B0A8;color:var(--ink);}
+  .yn-btn.sel-yes{background:var(--orange);border-color:var(--orange);color:white;}
+  .yn-btn.sel-no{background:var(--navy);border-color:var(--navy);color:white;}
+  .yn-btn.sel-na{background:var(--muted);border-color:var(--muted);color:white;}
+  .conditional-row{display:none;padding:8px 16px 12px;}
+  .conditional-row.visible{display:block;}
+  .cond-label{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:0.7px;text-transform:uppercase;margin-bottom:8px;display:block;}
+  .rating-field{margin-bottom:18px;}
+  .stars{display:flex;direction:rtl;gap:3px;margin-top:8px;}
+  .stars input{display:none;}
+  .stars label{font-size:28px;color:#DDD;cursor:pointer;transition:color 0.12s,transform 0.1s;text-transform:none;letter-spacing:0;line-height:1;}
+  .stars label:hover,.stars label:hover~label,.stars input:checked~label{color:var(--orange)!important;}
+  .stars label:hover{transform:scale(1.12);}
+  .consent-block{background:var(--off-white);border-radius:10px;padding:20px 22px;margin-bottom:26px;}
+  .consent-intro{font-size:13.5px;color:var(--ink);line-height:1.75;margin-bottom:16px;font-weight:400;}
+  .consent-intro .soft{color:var(--muted);font-style:italic;}
+  .consent-options{display:flex;gap:10px;}
+  .consent-opt{flex:1;display:flex;align-items:center;gap:10px;border:1.5px solid var(--border);border-radius:8px;padding:12px 15px;cursor:pointer;background:var(--white);transition:border-color 0.15s,box-shadow 0.15s;user-select:none;}
+  .consent-opt:hover{border-color:#C5C4BD;}
+  .consent-opt.sel-yes{border-color:var(--orange);box-shadow:0 0 0 3px var(--orange-light);}
+  .consent-opt.sel-no{border-color:var(--navy);box-shadow:0 0 0 3px rgba(30,36,58,0.07);}
+  .opt-dot{width:18px;height:18px;border-radius:50%;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.15s;position:relative;}
+  .sel-yes .opt-dot{border-color:var(--orange);background:var(--orange);}
+  .sel-no .opt-dot{border-color:var(--navy);background:var(--navy);}
+  .opt-dot::after{content:'';width:7px;height:7px;border-radius:50%;background:white;opacity:0;transition:opacity 0.15s;}
+  .sel-yes .opt-dot::after,.sel-no .opt-dot::after{opacity:1;}
+  .opt-label{font-size:13px;font-weight:500;color:var(--ink);}
+  .consent-error{font-size:12px;color:var(--orange);margin-top:10px;display:none;font-weight:500;}
+  .submit-row{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+  .return-note{font-size:11.5px;color:var(--muted);line-height:1.6;}
+  .return-note a{color:var(--orange);text-decoration:none;font-weight:500;}
+  .btn-submit{background:var(--orange);color:var(--white);border:none;border-radius:8px;font-family:'Inter',sans-serif;font-size:13.5px;font-weight:600;padding:13px 28px;cursor:pointer;white-space:nowrap;transition:background 0.18s,transform 0.13s;flex-shrink:0;}
+  .btn-submit:hover{background:#CF3C15;transform:translateY(-1px);}
+  .success-screen{display:none;text-align:center;padding:60px 44px 70px;flex-direction:column;align-items:center;gap:10px;}
+  .success-icon{width:56px;height:56px;background:var(--orange-light);border:1.5px solid var(--orange-mid);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--orange);margin:0 auto 8px;}
+  .success-title{font-size:22px;font-weight:700;color:var(--navy);}
+  .success-sub{font-size:14px;color:var(--muted);line-height:1.7;max-width:360px;}
+  .footer{background:var(--off-white);border-top:1px solid var(--border);padding:13px 44px;display:flex;justify-content:space-between;align-items:center;}
+  .footer-left{font-size:11px;color:var(--muted);}
+  .footer-right{font-size:11px;font-weight:700;color:var(--navy);letter-spacing:0.4px;}
+  @media(max-width:560px){
+    .header{flex-direction:column;align-items:flex-start;padding:20px 24px;}
+    .header-right{text-align:left;} .header-sub{text-align:left;}
+    .body,.footer{padding-left:24px;padding-right:24px;}
+    .row{flex-direction:column;gap:0;}
+    .submit-row{flex-direction:column;align-items:stretch;}
+    .btn-submit{text-align:center;}
+    .consent-options{flex-direction:column;}
+  }
 </style>
 </head>
 <body>
-
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="https://trivexgroup.com" class="nav-logo">TRIVEX <span>GROUP</span></a>
-    <a href="https://trivexgroup.com" class="nav-back">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-      Back to website
-    </a>
+<div class="card">
+  <div class="header">
+    <div class="header-logo"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QC8RXhpZgAASUkqAAgAAAAGABIBAwABAAAAAQAAABoBBQABAAAAVgAAABsBBQABAAAAXgAAACgBAwABAAAAAgAAABMCAwABAAAAAQAAAGmHBAABAAAAZgAAAAAAAABgAAAAAQAAAGAAAAABAAAABgAAkAcABAAAADAyMTABkQcABAAAAAECAwAAoAcABAAAADAxMDABoAMAAQAAAP//AAACoAMAAQAAAPQBAAADoAMAAQAAAPQBAAAAAAAA/+EOOGh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8APD94cGFja2V0IGJlZ2luPSfvu78nIGlkPSdXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQnPz4KPHg6eG1wbWV0YSB4bWxuczp4PSdhZG9iZTpuczptZXRhLyc+CjxyZGY6UkRGIHhtbG5zOnJkZj0naHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyc+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczpBdHRyaWI9J2h0dHA6Ly9ucy5hdHRyaWJ1dGlvbi5jb20vYWRzLzEuMC8nPgogIDxBdHRyaWI6QWRzPgogICA8cmRmOlNlcT4KICAgIDxyZGY6bGkgcmRmOnBhcnNlVHlwZT0nUmVzb3VyY2UnPgogICAgIDxBdHRyaWI6Q3JlYXRlZD4yMDI1LTAyLTA1PC9BdHRyaWI6Q3JlYXRlZD4KICAgICA8QXR0cmliOkV4dElkPjQxNjEwNDgwLTUyNWItNDM1Yy04ODhjLWI3ZjhlNjZkNGQxODwvQXR0cmliOkV4dElkPgogICAgIDxBdHRyaWI6RmJJZD41MjUyNjU5MTQxNzk1ODA8L0F0dHJpYjpGYklkPgogICAgIDxBdHRyaWI6VG91Y2hUeXBlPjI8L0F0dHJpYjpUb3VjaFR5cGU+CiAgICA8L3JkZjpsaT4KICAgPC9yZGY6U2VxPgogIDwvQXR0cmliOkFkcz4KIDwvcmRmOkRlc2NyaXB0aW9uPgoKIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PScnCiAgeG1sbnM6ZGM9J2h0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvJz4KICA8ZGM6dGl0bGU+CiAgIDxyZGY6QWx0PgogICAgPHJkZjpsaSB4bWw6bGFuZz0neC1kZWZhdWx0Jz5Ucml2ZXggTG9nbyAtIDU8L3JkZjpsaT4KICAgPC9yZGY6QWx0PgogIDwvZGM6dGl0bGU+CiA8L3JkZjpEZXNjcmlwdGlvbj4KCiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0nJwogIHhtbG5zOnBkZj0naHR0cDovL25zLmFkb2JlLmNvbS9wZGYvMS4zLyc+CiAgPHBkZjpBdXRob3I+T21yYW4gSXNtYWlsPC9wZGY6QXV0aG9yPgogPC9yZGY6RGVzY3JpcHRpb24+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczp4bXA9J2h0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8nPgogIDx4bXA6Q3JlYXRvclRvb2w+Q2FudmEgKFJlbmRlcmVyKSBkb2M9REFHY09aMmkzdUUgdXNlcj1VQUYyS3NOb1duWSBicmFuZD1CQUYyS2lUNF9uQSB0ZW1wbGF0ZT08L3htcDpDcmVhdG9yVG9vbD4KIDwvcmRmOkRlc2NyaXB0aW9uPgo8L3JkZjpSREY+CjwveDp4bXBtZXRhPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAo8P3hwYWNrZXQgZW5kPSd3Jz8+/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgB9AH0AwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8GoooruMQooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiljRpHVI1ZnYgKqjJJPYV2Vr8L/GlzbCeLw9eCMjID7Ub/vliD+lJtLcdjjKKt6rpl9pF49pqlpPaXK9YpkKNj1we3vVSmIKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACivpiy/Z98PT2cEzapqwaSNXIDR4yRn+5U3/AAzx4d/6Cur/APfUf/xFZe1iXyM+YaKKK1ICiiigAooooAKKKKAPff2XPDVndPqWv3Uay3NtILe23DPl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ABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB//9k=" alt="Trivex Group">
+    </div>
+    <div class="header-right">
+      <div class="header-tagline">Client Testimonial Form</div>
+      <div class="header-sub"><strong>Takes less than 3 minutes.</strong><br>Your feedback genuinely<br>helps our team grow.</div>
+    </div>
   </div>
-</nav>
-
-<main class="main">
-  <div class="badge">Client Feedback</div>
-  <h1>Share Your Experience</h1>
-  <p class="subtitle">Worked with Trivex Group? We'd love to hear about your experience. Your testimonial helps future clients and helps us continue improving.</p>
-
-  <div data-fs-success>
-    <div class="success-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+  <div class="body">
+    <form id="testimonialForm" novalidate>
+      <div class="section-title">Your Details</div>
+      <div class="row">
+        <div class="field"><label for="name">Full Name</label><input type="text" id="name" placeholder="e.g. Michael Johnson" required></div>
+        <div class="field"><label for="jobtitle">Your Title</label><input type="text" id="jobtitle" placeholder="e.g. Senior Director"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="company">Company</label><input type="text" id="company" placeholder="e.g. Recipe Unlimited Corp." required></div>
+        <div class="field"><label for="project">Project</label><input type="text" id="project" placeholder="e.g. Harvey&#39;s &mdash; Mississauga"></div>
+      </div>
+      <hr class="divider">
+      <div class="section-title">Project Delivery</div>
+      <div class="delivery-block">
+        <div class="check-row">
+          <div class="check-question">Was the project delivered on time?</div>
+          <div class="yn-group" id="grp-time">
+            <button type="button" class="yn-btn" data-group="time" data-val="yes">Yes</button>
+            <button type="button" class="yn-btn" data-group="time" data-val="no">No</button>
+          </div>
+        </div>
+        <div class="conditional-row" id="cond-time">
+          <span class="cond-label">Was the delay caused by Trivex Group?</span>
+          <div class="yn-group" id="grp-time-cause">
+            <button type="button" class="yn-btn" data-group="time-cause" data-val="yes">Yes</button>
+            <button type="button" class="yn-btn" data-group="time-cause" data-val="no">No</button>
+            <button type="button" class="yn-btn" data-group="time-cause" data-val="partial">Partially</button>
+          </div>
+        </div>
+        <div class="check-row">
+          <div class="check-question">Was the project completed on budget?</div>
+          <div class="yn-group" id="grp-budget">
+            <button type="button" class="yn-btn" data-group="budget" data-val="yes">Yes</button>
+            <button type="button" class="yn-btn" data-group="budget" data-val="no">No</button>
+          </div>
+        </div>
+        <div class="conditional-row" id="cond-budget">
+          <span class="cond-label">Was the cost variance caused by Trivex Group?</span>
+          <div class="yn-group" id="grp-budget-cause">
+            <button type="button" class="yn-btn" data-group="budget-cause" data-val="yes">Yes</button>
+            <button type="button" class="yn-btn" data-group="budget-cause" data-val="no">No</button>
+            <button type="button" class="yn-btn" data-group="budget-cause" data-val="partial">Partially</button>
+          </div>
+        </div>
+        <div class="check-row">
+          <div class="check-question">Was the site kept clean, safe, and professional throughout?</div>
+          <div class="yn-group" id="grp-safety">
+            <button type="button" class="yn-btn" data-group="safety" data-val="yes">Yes</button>
+            <button type="button" class="yn-btn" data-group="safety" data-val="no">No</button>
+          </div>
+        </div>
+        <div class="check-row">
+          <div class="check-question">Was communication from our team clear and consistent?</div>
+          <div class="yn-group" id="grp-comms">
+            <button type="button" class="yn-btn" data-group="comms" data-val="yes">Yes</button>
+            <button type="button" class="yn-btn" data-group="comms" data-val="no">No</button>
+          </div>
+        </div>
+      </div>
+      <hr class="divider">
+      <div class="section-title">Your Experience</div>
+      <div class="field"><label for="q1">How would you describe working with us?</label><textarea id="q1" placeholder="Your overall experience with Trivex Group&hellip;" required></textarea></div>
+      <div class="field"><label for="q2">What stood out most?</label><textarea id="q2" placeholder="Something our team or process did that impressed you&hellip;"></textarea></div>
+      <div class="field"><label for="q3">Would you recommend Trivex Group?</label><textarea id="q3" placeholder="And if so, why?" required></textarea></div>
+      <div class="field"><label for="q4">Any areas for improvement?</label><textarea id="q4" placeholder="We welcome honest feedback &mdash; it helps us get better&hellip;"></textarea></div>
+      <div class="rating-field">
+        <label>Overall Rating</label>
+        <div class="stars">
+          <input type="radio" name="rating" id="s5" value="5"><label for="s5">&#9733;</label>
+          <input type="radio" name="rating" id="s4" value="4"><label for="s4">&#9733;</label>
+          <input type="radio" name="rating" id="s3" value="3"><label for="s3">&#9733;</label>
+          <input type="radio" name="rating" id="s2" value="2"><label for="s2">&#9733;</label>
+          <input type="radio" name="rating" id="s1" value="1"><label for="s1">&#9733;</label>
+        </div>
+      </div>
+      <hr class="divider">
+      <div class="consent-block">
+        <div class="consent-intro">We&#8217;d really appreciate it if we could share your words with others. Testimonials are one of the main ways we grow &mdash; if you&#8217;re comfortable with us featuring this on our website, LinkedIn, or other materials, just let us know below. <span class="soft">Completely your call.</span></div>
+        <div class="consent-options">
+          <div class="consent-opt" id="opt-yes" data-consent="yes"><div class="opt-dot"></div><span class="opt-label">Yes, feel free to use it</span></div>
+          <div class="consent-opt" id="opt-no" data-consent="no"><div class="opt-dot"></div><span class="opt-label">I&#8217;d prefer to keep it private</span></div>
+        </div>
+        <div class="consent-error" id="consentError">Please select one option to continue.</div>
+      </div>
+      <div class="submit-row">
+        <div class="return-note">Responses go directly to<br><a href="mailto:info@trivexgroup.com">info@trivexgroup.com</a></div>
+        <button type="submit" class="btn-submit">Submit Testimonial &rarr;</button>
+      </div>
+    </form>
+    <div class="success-screen" id="successScreen">
+      <div class="success-icon">&#10003;</div>
+      <div class="success-title">Thank you.</div>
+      <div class="success-sub">Your feedback has been received. We genuinely appreciate you taking the time &mdash; it means a lot to the whole team at Trivex.</div>
     </div>
-    <div class="success-title">Thank you!</div>
-    <p class="success-text">Your testimonial has been submitted. We appreciate you taking the time to share your experience with Trivex Group.</p>
   </div>
-  <div data-fs-error class="form-error"></div>
-
-  <form id="testimonial-form">
-    <input type="hidden" name="_subject" value="New Testimonial Submission">
-
-    <div class="row2">
-      <div class="form-group">
-        <label>Full Name</label>
-        <input type="text" name="name" placeholder="John Smith" required data-fs-field>
-        <span data-fs-error="name"></span>
-      </div>
-      <div class="form-group">
-        <label>Email <span class="hint">(not published)</span></label>
-        <input type="email" name="email" placeholder="john@company.com" required data-fs-field>
-        <span data-fs-error="email"></span>
-      </div>
-    </div>
-
-    <div class="row2">
-      <div class="form-group">
-        <label>Company / Role</label>
-        <input type="text" name="role" placeholder="e.g. Franchise Owner, QSR" required data-fs-field>
-        <span data-fs-error="role"></span>
-      </div>
-      <div class="form-group">
-        <label>Project Location</label>
-        <input type="text" name="location" placeholder="e.g. Ottawa, Ontario" data-fs-field>
-        <span data-fs-error="location"></span>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label>Project Type</label>
-      <select name="project_type" required data-fs-field>
-        <option value="" disabled selected>Select project type</option>
-        <option value="Franchise Construction">Franchise Construction</option>
-        <option value="Restaurant Construction">Restaurant Construction</option>
-        <option value="Medical/Dental Clinic">Medical / Dental Clinic</option>
-        <option value="Office/Commercial Build-Out">Office / Commercial Build-Out</option>
-        <option value="Store Facelift/Renovation">Store Facelift / Renovation</option>
-        <option value="General Contracting">General Contracting</option>
-        <option value="Other">Other</option>
-      </select>
-      <span data-fs-error="project_type"></span>
-    </div>
-
-    <div class="form-group">
-      <label>Overall Rating</label>
-      <div class="star-rating">
-        <input type="radio" name="rating" value="5" id="star5" required><label for="star5">&#9733;</label>
-        <input type="radio" name="rating" value="4" id="star4"><label for="star4">&#9733;</label>
-        <input type="radio" name="rating" value="3" id="star3"><label for="star3">&#9733;</label>
-        <input type="radio" name="rating" value="2" id="star2"><label for="star2">&#9733;</label>
-        <input type="radio" name="rating" value="1" id="star1"><label for="star1">&#9733;</label>
-      </div>
-      <span data-fs-error="rating"></span>
-    </div>
-
-    <div class="form-group">
-      <label>Your Testimonial</label>
-      <textarea name="testimonial" placeholder="Tell us about your experience working with Trivex Group - what stood out, how was the process, would you recommend us?" required rows="5" data-fs-field></textarea>
-      <span data-fs-error="testimonial"></span>
-    </div>
-
-    <div class="consent">
-      <input type="checkbox" id="consent" required>
-      <label for="consent">I agree that Trivex Group may use my name, role, and testimonial on their website and marketing materials.</label>
-    </div>
-
-    <button type="submit" class="btn-submit" data-fs-submit-btn>
-      Submit Testimonial
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </button>
-  </form>
-</main>
-
-<footer class="footer">
-  <p>&copy; 2026 Trivex Group Corp. All rights reserved.</p>
-</footer>
-
+  <div class="footer">
+    <div class="footer-left">trivexgroup.com &nbsp;&middot;&nbsp; info@trivexgroup.com &nbsp;&middot;&nbsp; +1 (905) 536-3277</div>
+    <div class="footer-right">Trivex Group Corp.</div>
+  </div>
+</div>
 <script>
-  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-  formspree('initForm', { formElement: '#testimonial-form', formId: 'mgoppjdj' });
+window.addEventListener("DOMContentLoaded", function() {
+  var consentValue = null;
+  var ynState = {};
+
+  document.addEventListener("click", function(e) {
+    var btn = e.target.closest(".yn-btn");
+    if (btn) {
+      var group = btn.getAttribute("data-group");
+      var val = btn.getAttribute("data-val");
+      if (!group || !val) return;
+      ynState[group] = val;
+      var grp = document.getElementById("grp-" + group);
+      if (grp) {
+        grp.querySelectorAll(".yn-btn").forEach(function(b) { b.className = "yn-btn"; });
+      }
+      if (val === "yes") btn.className = "yn-btn sel-yes";
+      else if (val === "no") btn.className = "yn-btn sel-no";
+      else btn.className = "yn-btn sel-na";
+      var cond = document.getElementById("cond-" + group);
+      if (cond) {
+        if (val === "no") cond.classList.add("visible");
+        else cond.classList.remove("visible");
+      }
+    }
+    var opt = e.target.closest(".consent-opt");
+    if (opt) {
+      consentValue = opt.getAttribute("data-consent");
+      document.getElementById("opt-yes").className = "consent-opt" + (consentValue === "yes" ? " sel-yes" : "");
+      document.getElementById("opt-no").className = "consent-opt" + (consentValue === "no" ? " sel-no" : "");
+      document.getElementById("consentError").style.display = "none";
+    }
+  });
+
+  document.getElementById("testimonialForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    if (!consentValue) {
+      var err = document.getElementById("consentError");
+      err.style.display = "block";
+      err.scrollIntoView({ behavior: "smooth", block: "center" });
+      return;
+    }
+    function gv(id) { var el = document.getElementById(id); return el ? el.value : ""; }
+    function yn(k) { return ynState[k] || "Not answered"; }
+    var nm = gv("name"), co = gv("company");
+    var re = document.querySelector("input[name=\"rating\"]:checked");
+    var rv = re ? re.value + " / 5 stars" : "Not selected";
+    var ct = consentValue === "yes" ? "Yes - approved" : "No - keep private";
+    var lines = [
+      "TRIVEX GROUP - CLIENT TESTIMONIAL",
+      "----------------------------------",
+      "",
+      "Name:    " + nm,
+      "Title:   " + gv("jobtitle"),
+      "Company: " + co,
+      "Project: " + gv("project"),
+      "",
+      "-- PROJECT DELIVERY --",
+      "On time:       " + yn("time") + (ynState["time"]==="no" ? " | Trivex responsible: "+yn("time-cause") : ""),
+      "On budget:     " + yn("budget") + (ynState["budget"]==="no" ? " | Trivex responsible: "+yn("budget-cause") : ""),
+      "Clean & safe:  " + yn("safety"),
+      "Communication: " + yn("comms"),
+      "",
+      "-- EXPERIENCE --",
+      "Overall experience:",
+      gv("q1"),
+      "",
+      "What stood out:",
+      gv("q2"),
+      "",
+      "Would recommend:",
+      gv("q3"),
+      "",
+      "Areas for improvement:",
+      gv("q4"),
+      "",
+      "Rating: " + rv,
+      "",
+      "Permission to use publicly: " + ct
+    ];
+    var submitBtn = document.querySelector(".btn-submit");
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Submitting...";
+
+    fetch("https://formspree.io/f/mgoppjdj", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({
+        _subject: "Client Testimonial - " + (co || nm),
+        name: nm,
+        title: gv("jobtitle"),
+        company: co,
+        project: gv("project"),
+        on_time: yn("time") + (ynState["time"]==="no" ? " | Trivex responsible: "+yn("time-cause") : ""),
+        on_budget: yn("budget") + (ynState["budget"]==="no" ? " | Trivex responsible: "+yn("budget-cause") : ""),
+        clean_and_safe: yn("safety"),
+        communication: yn("comms"),
+        overall_experience: gv("q1"),
+        what_stood_out: gv("q2"),
+        would_recommend: gv("q3"),
+        areas_for_improvement: gv("q4"),
+        rating: rv,
+        permission_to_use: ct
+      })
+    }).then(function(response) {
+      if (response.ok) {
+        document.getElementById("testimonialForm").style.display = "none";
+        document.getElementById("successScreen").style.display = "flex";
+      } else {
+        alert("Something went wrong. Please try again.");
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = "Submit Testimonial &rarr;";
+      }
+    }).catch(function() {
+      alert("Network error. Please check your connection and try again.");
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = "Submit Testimonial &rarr;";
+    });
+  });
+});
 </script>
-<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
