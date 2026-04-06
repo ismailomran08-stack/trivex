@@ -3,6 +3,8 @@
   "outputDirectory": ".",
   "rewrites": [
     { "source": "/admin", "destination": "/admin.html" },
+    { "source": "/testimonials", "destination": "/testimonials.html" },
+    { "source": "/:path*", "has": [{ "type": "host", "value": "testimonial.trivexgroup.com" }], "destination": "/testimonials.html" },
     { "source": "/services/franchise-construction", "destination": "/services/franchise-construction.html" },
     { "source": "/services/restaurant-construction", "destination": "/services/restaurant-construction.html" },
     { "source": "/services/medical-clinic-construction", "destination": "/services/medical-clinic-construction.html" },
