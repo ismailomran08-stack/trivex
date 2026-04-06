@@ -2,8 +2,8 @@
   "buildCommand": "npm run build",
   "outputDirectory": ".",
   "redirects": [
-    { "source": "/", "has": [{ "type": "host", "value": "testimonial.trivexgroup.com" }], "destination": "/testimonials.html", "statusCode": 200 },
-    { "source": "/:path*", "has": [{ "type": "host", "value": "testimonial.trivexgroup.com" }], "destination": "/testimonials.html", "statusCode": 200 }
+    { "source": "/", "has": [{ "type": "host", "value": "testimonial.trivexgroup.com" }], "destination": "https://trivexgroup.com/testimonials", "permanent": false },
+    { "source": "/:path((?!testimonials).*)", "has": [{ "type": "host", "value": "testimonial.trivexgroup.com" }], "destination": "https://trivexgroup.com/testimonials", "permanent": false }
   ],
   "rewrites": [
     { "source": "/admin", "destination": "/admin.html" },
