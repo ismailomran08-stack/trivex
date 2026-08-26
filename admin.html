@@ -829,7 +829,7 @@ function collectAll() {
 
 function collectHero() {
   if (!document.getElementById('hero-badge')) return;
-  data.hero = { badge: val('hero-badge'), titleLine1: val('hero-title1'), titleLine2: val('hero-title2'), description: val('hero-desc'), mainImage: val('hero-mainimg'), floatImage: val('hero-floatimg'), statNumber: val('hero-statnum'), statLabel: val('hero-statlabel') };
+  data.hero = Object.assign({}, data.hero, { badge: val('hero-badge'), titleLine1: val('hero-title1'), titleLine2: val('hero-title2'), description: val('hero-desc'), mainImage: val('hero-mainimg'), floatImage: val('hero-floatimg'), statNumber: val('hero-statnum'), statLabel: val('hero-statlabel'), captionTitle: val('hero-captitle'), captionSub: val('hero-capsub'), captionBadge: val('hero-capbadge') });
 }
 function collectStats() {
   if (!document.getElementById('stat-target-0')) return;
@@ -1119,6 +1119,15 @@ function renderHero() {
         <div class="fg"><label>Main Image</label>${imgUpload('hero-mainimg', h.mainImage)}</div>
         <div class="fg"><label>Float Image</label>${imgUpload('hero-floatimg', h.floatImage)}</div>
       </div>
+      <div class="row2">
+        <div class="fg"><label>Image Caption &mdash; Project</label><input type="text" id="hero-captitle" value="${esc(h.captionTitle || '')}" placeholder="Boustan &mdash; Fredericton, NB"></div>
+        <div class="fg"><label>Image Caption &mdash; Detail</label><input type="text" id="hero-capsub" value="${esc(h.captionSub || '')}" placeholder="Full restaurant fit-out, delivered turnkey"></div>
+      </div>
+      <div class="row2">
+        <div class="fg"><label>Image Caption &mdash; Badge</label><input type="text" id="hero-capbadge" value="${esc(h.captionBadge || '')}" placeholder="Completed"></div>
+        <div class="fg"></div>
+      </div>
+      <p style="font-size:12px;opacity:.65;margin-top:8px">The caption sits on the hero image &mdash; update it whenever you change the main image so the two still match. Leave the project field blank to hide it.</p>
     </div>`;
 }
 function liveUpdate(id, v) { const el = document.getElementById(id); if (el) el.textContent = v; }

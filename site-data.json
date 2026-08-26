@@ -137,13 +137,16 @@
   },
   "hero": {
     "badge": "Now Operating Across All Canadian Provinces",
-    "mainImage": "https://trivexgroup.com/wp-content/uploads/2026/02/20240610_210026-600x600.jpg",
+    "mainImage": "/wp-content/uploads/2026/portfolio/hero-boustan-fredericton.jpg",
     "statLabel": "Projects",
     "floatImage": "https://trivexgroup.com/wp-content/uploads/2026/02/20250308_201937-600x600.jpg",
     "statNumber": "50+",
     "titleLine1": "Partner-Operated",
     "titleLine2": "Commercial Construction.",
-    "description": "50+ completed projects across 8 Provinces. Franchise fit-outs, medical clinics, restaurant builds, and commercial spaces, led personally by the partners, every time."
+    "description": "50+ completed projects across 8 Provinces. Franchise fit-outs, medical clinics, restaurant builds, and commercial spaces, led personally by the partners, every time.",
+    "captionTitle": "Boustan — Fredericton, NB",
+    "captionSub": "Full restaurant fit-out, delivered turnkey",
+    "captionBadge": "Completed"
   },
   "about": {
     "title": "Built by Operators,<br>for Operators.",
@@ -192,47 +195,47 @@
     "logos": [
       {
         "alt": "Boustan",
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/11.png"
+        "src": "/wp-content/uploads/2026/01/11.png"
       },
       {
         "alt": "barBurrito",
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/6.png"
+        "src": "/wp-content/uploads/2026/01/6.png"
       },
       {
         "alt": "Pizza Hut",
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/10.png"
+        "src": "/wp-content/uploads/2026/01/10.png"
       },
       {
         "alt": "Pizza Pizza",
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/7.png"
+        "src": "/wp-content/uploads/2026/01/7-c.png"
       },
       {
         "alt": "Lazeez Shawarma",
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/9.png"
+        "src": "/wp-content/uploads/2026/01/9.png"
       },
       {
         "alt": "Wings Up",
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/5.png"
+        "src": "/wp-content/uploads/2026/01/5.png"
       },
       {
         "alt": "La Prep",
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/4.png"
+        "src": "/wp-content/uploads/2026/01/4.png"
       },
       {
         "alt": "Bobby's Burger",
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/1.png"
+        "src": "/wp-content/uploads/2026/01/1.png"
       },
       {
         "alt": "Burgers on Fleek",
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/3.png"
+        "src": "/wp-content/uploads/2026/01/3-c.png"
       },
       {
         "alt": "Shelby's Shawarma",
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/13.png"
+        "src": "/wp-content/uploads/2026/01/13-c.png"
       },
       {
         "alt": "Chaska",
-        "src": "https://trivexgroup.com/wp-content/uploads/2026/01/14.png"
+        "src": "/wp-content/uploads/2026/01/14-c.png"
       }
     ],
     "title": "Trusted by Industry Leaders",
